@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
+@import url('href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet');
+$main-gold: #fed136;
+$main-font: "Montserrat";
+@mixin flexible($display, $align-items, $justify-items, $flex-direction) {
+    display: $display;
+    align-items: $align-items;
+    justify-items: $justify-items;
+    flex-direction: $flex-direction;
+}
+body{
+    max-width: 1400px;
+}
+.hero {
+    background: grey;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.logo {
+    color: $main-gold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    font-weight: normal;
+}
+.navigation {
+    list-style-type: none;
+    display: flex;
+        li {
+            font-size: 14px;
+            margin: 50px 16px 205px 16px;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: $main-font; 
+                color: #fff;
+            }
+        }
+}
+.home {
+    @include flexible(flex, center, center, column);
+    h1 {  
+        font-family: $main-font;
+        font-size: 75px;
+        color: #fff;
+        margin-bottom: 60px;    
+    }
+    h2 {
+        font-size: 40px;
+        color: #fff;
+        font-weight: normal;
+        margin-bottom: 50px;
+        font-family: 'Noto Serif JP', serif;
+        font-style: italic;
+    }
+    .btn-home {
+        background: $main-gold;
+        color: #fff;
+        width: 240px;
+        height: 65px;
+        margin-bottom: 160px;
+        border-width: 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+                                                // SECTION SERVICES
