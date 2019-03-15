@@ -1,30 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
-@import url('href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 $main-gold: #fed136;
 $main-font: "Montserrat";
+$garamond-font: 'EB Garamond', serif;
 @mixin flexible($display, $align-items, $justify-items, $flex-direction) {
     display: $display;
     align-items: $align-items;
     justify-items: $justify-items;
     flex-direction: $flex-direction;
 }
+@mixin font-source($font-size, $color, $font-weight) {
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-weight;
+}
 body{
     max-width: 1400px;
 }
 .hero {
-    background: grey;
+                                                    // Dlaczego szuka w pliku css i nie da się tego pominąć?
+background-image: url("./images/background-head.jpg");    
 }
+    
 header{
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
 }
 .logo {
-    color: $main-gold;
+    @include font-source(26px, $main-gold, normal);
     font-family: 'Dancing Script', cursive;
-    font-size: 26px;
-    font-weight: normal;
 }
 .navigation {
     list-style-type: none;
@@ -42,18 +48,15 @@ header{
 }
 .home {
     @include flexible(flex, center, center, column);
-    h1 {  
+    h1 {
+        @include font-source(75px, #fff, bold);  
         font-family: $main-font;
-        font-size: 75px;
-        color: #fff;
         margin-bottom: 60px;    
     }
     h2 {
-        font-size: 40px;
-        color: #fff;
-        font-weight: normal;
+        @include font-source(40px, #fff, normal);
+        font-family: $garamond-font;
         margin-bottom: 50px;
-        font-family: 'Noto Serif JP', serif;
         font-style: italic;
     }
     .btn-home {
@@ -72,3 +75,16 @@ header{
     }
 }
                                                 // SECTION SERVICES
+.title-services {
+    @include flexible(flex, center, center, column);
+    h2 {
+        @include font-source(40px, #000, bold);
+        font-family: $main-font;
+        text-transform: uppercase;
+        margin-top: 120px;
+    }
+    h6 {
+        font-family: $garamond-font;
+        font-size: 16px;
+    }
+}                                                
