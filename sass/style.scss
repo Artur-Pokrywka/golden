@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 $main-gold: #fed136;
+$main-gray: #808080;
 $main-font: "Montserrat";
 $garamond-font: 'EB Garamond', serif;
 @mixin flexible($display, $align-items, $justify-items, $flex-direction) {
@@ -82,9 +83,29 @@ header{
         font-family: $main-font;
         text-transform: uppercase;
         margin-top: 120px;
+        margin-bottom: 20px;
     }
     h6 {
+        @include font-source(16px, $main-gray, normal);
         font-family: $garamond-font;
-        font-size: 16px;
+        font-style: italic;
+        margin: 0;
     }
+}
+.services-holder {
+    display: flex;
+    margin:0 240px;
+    .service-element {
+       @include flexible(flex, center, center, column);
+       margin: 14px 16px;
+       h5 {
+           @include font-source(18px, #000, bold);
+           font-family: $main-font;
+       }
+       p {
+            @include font-source(14px, $main-gray, normal);
+            font-family: $garamond-font;
+            text-align: center;
+       }
+   }
 }                                                
