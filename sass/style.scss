@@ -5,23 +5,37 @@ $main-gold: #fed136;
 $main-gray: #808080;
 $main-font: "Montserrat";
 $garamond-font: 'EB Garamond', serif;
-@mixin flexible($display, $align-items, $justify-items, $flex-direction) {
+@mixin flexible($display, $align-items, $justify-content, $flex-direction) {
     display: $display;
     align-items: $align-items;
-    justify-items: $justify-items;
+    justify-content: $justify-content;
     flex-direction: $flex-direction;
 }
-@mixin font-source($font-size, $color, $font-weight) {
+@mixin font-source($font-size, $color, $font-weight, $font-style) {
     font-size: $font-size;
     color: $color;
     font-weight: $font-weight;
+    font-style: $font-style;
 }
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
 body{
     max-width: 1400px;
+    width: 1400px;
 }
 .hero {
                                                     // Dlaczego szuka w pliku css i nie da się tego pominąć?
-background-image: url("./images/background-head.jpg");    
+background-image: src="/images/background/background-head.jpg";    
 }
     
 header{
@@ -30,7 +44,7 @@ header{
     align-items: baseline;
 }
 .logo {
-    @include font-source(26px, $main-gold, normal);
+    @include font-source(26px, $main-gold, normal, normal);
     font-family: 'Dancing Script', cursive;
 }
 .navigation {
@@ -50,15 +64,14 @@ header{
 .home {
     @include flexible(flex, center, center, column);
     h1 {
-        @include font-source(75px, #fff, bold);  
+        @include font-source(75px, #fff, bold, normal);  
         font-family: $main-font;
         margin-bottom: 60px;    
     }
     h2 {
-        @include font-source(40px, #fff, normal);
+        @include font-source(40px, #fff, normal, italic);
         font-family: $garamond-font;
         margin-bottom: 50px;
-        font-style: italic;
     }
     .btn-home {
         background: $main-gold;
@@ -79,33 +92,88 @@ header{
 .title-services {
     @include flexible(flex, center, center, column);
     h2 {
-        @include font-source(40px, #000, bold);
+        @include font-source(40px, #000, bold, normal);
         font-family: $main-font;
         text-transform: uppercase;
         margin-top: 120px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
     h6 {
-        @include font-source(16px, $main-gray, normal);
+        @include font-source(16px, $main-gray, normal, italic);
         font-family: $garamond-font;
-        font-style: italic;
         margin: 0;
     }
 }
 .services-holder {
     display: flex;
-    margin:0 240px;
+    margin: 120px 230px;
     .service-element {
        @include flexible(flex, center, center, column);
-       margin: 14px 16px;
+       margin: 20px 16px;
+       .icon-basket{
+            @include flexible(flex, center, center, initial);
+            width: 60px;
+            height: 60px;
+            border: 3px solid $main-gold;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            .fa {
+                @include font-source(18px, $main-gold, bold, normal);    
+                line-height: 75px;
+            }
+       }
        h5 {
-           @include font-source(18px, #000, bold);
+           @include font-source(18px, #000, bold, normal);
            font-family: $main-font;
        }
        p {
-            @include font-source(14px, $main-gray, normal);
+            @include font-source(14px, $main-gray, normal, normal);
             font-family: $garamond-font;
             text-align: center;
        }
    }
 }                                                
+                                                            // PORTFOLIO
+.portfolio {
+    background: #f7f7f7;
+    height: fit-content;
+    .title-portfolio {
+        @include flexible(flex, center, center, column);
+        h2 {
+            @include font-source(40px, #000, bold, normal);
+            font-family: $main-font;
+            text-transform: uppercase;
+            margin-top: 120px;
+            margin-bottom: 0;
+        }
+        h6 {
+            @include font-source(16px, $main-gray, normal, italic);
+            font-family: $garamond-font;
+            margin: 0;
+        }
+    }
+    .projects-holder {
+        margin: 80px 230px 120px 230px;
+        .row {
+            display: flex;
+            .project-example {
+                @include flexible(flex, center, center, column);
+                background: #fff;
+                margin: 30px 16px;
+                img {
+                    margin-bottom: 30px;
+                }
+                h3 {
+                    @include font-source(18px, #000, bold, normal);
+                    font-family: $main-font;
+                    margin: 0;
+                }
+                h6 {
+                    @include font-source(14px, $main-gray, normal, italic);
+                    font-family: $garamond-font;
+                    margin: 0 0 30px 0;
+                }
+            }   
+        }    
+    }
+}
