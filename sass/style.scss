@@ -35,7 +35,7 @@ body{
 }
 .hero {
                                                     // Dlaczego szuka w pliku css i nie da się tego pominąć?
-background-image: src="/images/background/background-head.jpg";    
+background-image: url("./images/background-head.jpg");    
 }
     
 header{
@@ -136,7 +136,7 @@ header{
                                                             // PORTFOLIO
 .portfolio {
     background: #f7f7f7;
-    height: fit-content;
+     height: fit-content;
     .title-portfolio {
         @include flexible(flex, center, center, column);
         h2 {
@@ -177,3 +177,37 @@ header{
         }    
     }
 }
+                                                    //  ABOUT US
+.about-us {
+    .title-about {
+        @include flexible(flex, center, center, column);
+        h2 {
+            @include font-source(40px, #000, bold, normal);
+            font-family: $main-font;
+            text-transform: uppercase;
+            margin-top: 120px;
+            margin-bottom: 0;
+        }
+        h6 {
+            @include font-source(16px, $main-gray, normal, italic);
+            font-family: $garamond-font;
+            margin: 0;
+        }
+    }
+    .about-holder {
+        @include flexible(flex, center, center, column);
+        .about-element {
+            @include flexible(flex, center, center, row-reverse);
+            .description {
+                text-align: right;
+                h4 {
+                    @include font-source(18px, #000, bold, normal);
+                    font-family: $main-font;
+                }
+                p {
+                    @include font-source(14px, $main-gray, normal, normal);
+                }
+            }    
+        }    
+    }
+}           
