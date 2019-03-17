@@ -5,13 +5,15 @@ $main-gold: #fed136;
 $main-gray: #808080;
 $main-font: "Montserrat";
 $garamond-font: 'EB Garamond', serif;
+$dancing-script: 'Dancing Script', cursive;
 @mixin flexible($display, $align-items, $justify-content, $flex-direction) {
     display: $display;
     align-items: $align-items;
     justify-content: $justify-content;
     flex-direction: $flex-direction;
 }
-@mixin font-source($font-size, $color, $font-weight, $font-style) {
+@mixin font-source($font-family, $font-size, $color, $font-weight, $font-style) {
+    font-family: $font-family;
     font-size: $font-size;
     color: $color;
     font-weight: $font-weight;
@@ -33,74 +35,64 @@ body{
     max-width: 1400px;
     width: 1400px;
 }
-.hero {
-                                                    // Dlaczego szuka w pliku css i nie da się tego pominąć?
-background-image: url("./images/background-head.jpg");    
-}
-    
-header{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-}
-.logo {
-    @include font-source(26px, $main-gold, normal, normal);
-    font-family: 'Dancing Script', cursive;
-}
-.navigation {
-    list-style-type: none;
-    display: flex;
-        li {
-            font-size: 14px;
-            margin: 50px 16px 205px 16px;
-            a {
-                text-decoration: none;
-                text-transform: uppercase;
-                font-family: $main-font; 
-                color: #fff;
+.hero {                                                   
+    background-image: url("./images/background-head.jpg"); // Dlaczego szuka w pliku css i nie da się tego pominąć?
+    header {
+        @include flexible(flex, baseline, space-evenly, unset);
+        .logo {
+            @include font-source($dancing-script, 26px, $main-gold, normal, normal);
+        }
+        .navigation {
+            list-style-type: none;
+            display: flex;
+                li {
+                    font-size: 14px;
+                    margin: 50px 16px 205px 16px;
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: $main-font; 
+                        color: #fff;
+                    }
+                }
+        }
+    }
+    .home {
+        @include flexible(flex, center, center, column);
+        h1 {
+            @include font-source($main-font, 75px, #fff, bold, normal);  
+            margin-bottom: 60px;    
+        }
+        h2 {
+            @include font-source($garamond-font, 40px, #fff, normal, italic);
+            margin-bottom: 50px;
+        }
+        .btn-home {
+            @include font-source($main-font, 18px, #fff, bold, normal);
+            background: $main-gold;
+            width: 240px;
+            height: 65px;
+            margin-bottom: 160px;
+            border-width: 0;
+            text-transform: uppercase;
+            border-radius: 2px;
+            &:hover {
+                cursor: pointer;
             }
         }
-}
-.home {
-    @include flexible(flex, center, center, column);
-    h1 {
-        @include font-source(75px, #fff, bold, normal);  
-        font-family: $main-font;
-        margin-bottom: 60px;    
-    }
-    h2 {
-        @include font-source(40px, #fff, normal, italic);
-        font-family: $garamond-font;
-        margin-bottom: 50px;
-    }
-    .btn-home {
-        background: $main-gold;
-        color: #fff;
-        width: 240px;
-        height: 65px;
-        margin-bottom: 160px;
-        border-width: 0;
-        font-size: 14px;
-        text-transform: uppercase;
-        border-radius: 2px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
+    }   
 }
                                                 // SECTION SERVICES
 .title-services {
     @include flexible(flex, center, center, column);
     h2 {
-        @include font-source(40px, #000, bold, normal);
-        font-family: $main-font;
+        @include font-source($main-font, 40px, #000, bold, normal);
         text-transform: uppercase;
         margin-top: 120px;
         margin-bottom: 0;
     }
     h6 {
-        @include font-source(16px, $main-gray, normal, italic);
-        font-family: $garamond-font;
+        @include font-source($garamond-font, 16px, $main-gray, normal, italic);
         margin: 0;
     }
 }
@@ -118,17 +110,15 @@ header{
             border-radius: 50%;
             margin-bottom: 20px;
             .fa {
-                @include font-source(18px, $main-gold, bold, normal);    
+                @include font-source("Font Awesome 5 Free", 18px, $main-gold, bold, normal);    
                 line-height: 75px;
             }
        }
        h5 {
-           @include font-source(18px, #000, bold, normal);
-           font-family: $main-font;
+           @include font-source($main-font, 18px, #000, bold, normal);
        }
        p {
-            @include font-source(14px, $main-gray, normal, normal);
-            font-family: $garamond-font;
+            @include font-source($garamond-font, 14px, $main-gray, normal, normal);
             text-align: center;
        }
    }
@@ -136,19 +126,17 @@ header{
                                                             // PORTFOLIO
 .portfolio {
     background: #f7f7f7;
-     height: fit-content;
+    height: fit-content;
     .title-portfolio {
         @include flexible(flex, center, center, column);
         h2 {
-            @include font-source(40px, #000, bold, normal);
-            font-family: $main-font;
+            @include font-source($main-font, 40px, #000, bold, normal);
             text-transform: uppercase;
             margin-top: 120px;
             margin-bottom: 0;
         }
         h6 {
-            @include font-source(16px, $main-gray, normal, italic);
-            font-family: $garamond-font;
+            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
             margin: 0;
         }
     }
@@ -164,13 +152,11 @@ header{
                     margin-bottom: 30px;
                 }
                 h3 {
-                    @include font-source(18px, #000, bold, normal);
-                    font-family: $main-font;
+                    @include font-source($main-font, 18px, #000, bold, normal);
                     margin: 0;
                 }
                 h6 {
-                    @include font-source(14px, $main-gray, normal, italic);
-                    font-family: $garamond-font;
+                    @include font-source($garamond-font, 14px, $main-gray, normal, italic);
                     margin: 0 0 30px 0;
                 }
             }   
@@ -182,32 +168,60 @@ header{
     .title-about {
         @include flexible(flex, center, center, column);
         h2 {
-            @include font-source(40px, #000, bold, normal);
-            font-family: $main-font;
+            @include font-source($main-font, 40px, #000, bold, normal);
             text-transform: uppercase;
             margin-top: 120px;
             margin-bottom: 0;
         }
         h6 {
-            @include font-source(16px, $main-gray, normal, italic);
-            font-family: $garamond-font;
+            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
             margin: 0;
         }
     }
-    .about-holder {
-        @include flexible(flex, center, center, column);
+    .about-holder {    
         .about-element {
             @include flexible(flex, center, center, row-reverse);
+            margin-top: 80px;
+            .img-basket {    
+                position: absolute
+            }
             .description {
-                text-align: right;
                 h4 {
-                    @include font-source(18px, #000, bold, normal);
-                    font-family: $main-font;
+                    @include font-source($main-font, 18px, #000, bold, normal);
+                    margin: 0;
                 }
                 p {
-                    @include font-source(14px, $main-gray, normal, normal);
+                    @include font-source($garamond-font, 14px, $main-gray, normal, normal);
                 }
+            }
+            .description-left {
+                text-align: right;
+                margin-right: 500px;
+            }
+            .description-right {
+                text-align: left;
+                margin-left: 500px;
             }    
+        }
+        .last-element {
+            margin-bottom: 120px;
         }    
     }
-}           
+}  
+                                                // AMAZING TEAM         
+.amazing-team {
+    background: #f7f7f7;
+    .title-team {
+        @include flexible(flex, center, center, column);
+        h2 {
+            @include font-source($main-font, 40px, #000, bold, normal);
+            text-transform: uppercase;
+            margin-top: 120px;
+            margin-bottom: 0;
+        }
+        h6 {
+            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
+            margin: 0;
+        }   
+    }
+}
