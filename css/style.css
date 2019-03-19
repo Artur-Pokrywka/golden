@@ -1,116 +1,464 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
-.col-1 { width: 8.33%; }
+.col-1 {
+  width: 8.33%;
+}
 
-.col-2 { width: 16.66%; }
+.col-2 {
+  width: 16.66%;
+}
 
-.col-3 { width: 25%; }
+.col-3 {
+  width: 25%;
+}
 
-.col-4 { width: 33.33%; }
+.col-4 {
+  width: 33.33%;
+}
 
-.col-5 { width: 41.66%; }
+.col-5 {
+  width: 41.66%;
+}
 
-.col-6 { width: 50%; }
+.col-6 {
+  width: 50%;
+}
 
-.col-7 { width: 58.33%; }
+.col-7 {
+  width: 58.33%;
+}
 
-.col-8 { width: 66.66%; }
+.col-8 {
+  width: 66.66%;
+}
 
-.col-9 { width: 75%; }
+.col-9 {
+  width: 75%;
+}
 
-.col-10 { width: 83.33%; }
+.col-10 {
+  width: 83.33%;
+}
 
-.col-11 { width: 91.66%; }
+.col-11 {
+  width: 91.66%;
+}
 
-.col-12 { width: 100%; }
+.col-12 {
+  width: 100%;
+}
 
-body { max-width: 1400px; width: 1400px; }
+body {
+  max-width: 1400px;
+  width: 1400px;
+}
 
-.hero { background-image: url("./images/background-head.jpg"); }
+.hero {
+  background-image: url("./images/background-head.jpg");
+}
 
-.hero header { display: -ms-flexbox; display: flex; -ms-flex-align: baseline; align-items: baseline; -ms-flex-pack: space-evenly; justify-content: space-evenly; -ms-flex-direction: unset; flex-direction: unset; }
+.hero header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  flex-direction: unset;
+}
 
-.hero header .logo { font-family: "Dancing Script", cursive; font-size: 26px; color: #fed136; font-weight: normal; font-style: normal; }
+.hero header .logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 26px;
+  color: #fed136;
+  font-weight: normal;
+  font-style: normal;
+}
 
-.hero header .navigation { list-style-type: none; display: -ms-flexbox; display: flex; }
+.hero header .navigation {
+  list-style-type: none;
+  display: flex;
+}
 
-.hero header .navigation li { font-size: 14px; margin: 50px 16px 205px 16px; }
+.hero header .navigation li {
+  font-size: 14px;
+  margin: 50px 16px 205px 16px;
+}
 
-.hero header .navigation li a { text-decoration: none; text-transform: uppercase; font-family: "Montserrat"; color: #fff; }
+.hero header .navigation li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  color: #fff;
+}
 
-.hero .home { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; }
+.hero .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.hero .home h1 { font-family: "Montserrat"; font-size: 75px; color: #fff; font-weight: bold; font-style: normal; margin-bottom: 60px; }
+.hero .home h1 {
+  font-family: "Montserrat";
+  font-size: 75px;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 60px;
+}
 
-.hero .home h2 { font-family: "EB Garamond", serif; font-size: 40px; color: #fff; font-weight: normal; font-style: italic; margin-bottom: 50px; }
+.hero .home h2 {
+  font-family: "EB Garamond", serif;
+  font-size: 40px;
+  color: #fff;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 50px;
+}
 
-.hero .home .btn-home { font-family: "Montserrat"; font-size: 18px; color: #fff; font-weight: bold; font-style: normal; background: #fed136; width: 240px; height: 65px; margin-bottom: 160px; border-width: 0; text-transform: uppercase; border-radius: 2px; }
+.hero .home .btn-home {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  background: #fed136;
+  width: 240px;
+  height: 65px;
+  margin-bottom: 160px;
+  border-width: 0;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
 
-.hero .home .btn-home:hover { cursor: pointer; }
+.hero .home .btn-home:hover {
+  cursor: pointer;
+}
 
-.title-services { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; }
+.title-services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.title-services h2 { font-family: "Montserrat"; font-size: 40px; color: #000; font-weight: bold; font-style: normal; text-transform: uppercase; margin-top: 120px; margin-bottom: 0; }
+.title-services h2 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 0;
+}
 
-.title-services h6 { font-family: "EB Garamond", serif; font-size: 16px; color: #808080; font-weight: normal; font-style: italic; margin: 0; }
+.title-services h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
 
-.services-holder { display: -ms-flexbox; display: flex; margin: 120px 230px; }
+.services-holder {
+  display: flex;
+  margin: 120px 230px;
+}
 
-.services-holder .service-element { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; margin: 20px 16px; }
+.services-holder .service-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 16px;
+}
 
-.services-holder .service-element .icon-basket { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: initial; flex-direction: initial; width: 60px; height: 60px; border: 3px solid #fed136; border-radius: 50%; margin-bottom: 20px; }
+.services-holder .service-element .icon-basket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fed136;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
 
-.services-holder .service-element .icon-basket .fa { font-family: "Font Awesome 5 Free"; font-size: 18px; color: #fed136; font-weight: bold; font-style: normal; line-height: 75px; }
+.services-holder .service-element .icon-basket .fa {
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  color: #fed136;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 75px;
+}
 
-.services-holder .service-element h5 { font-family: "Montserrat"; font-size: 18px; color: #000; font-weight: bold; font-style: normal; }
+.services-holder .service-element h5 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+}
 
-.services-holder .service-element p { font-family: "EB Garamond", serif; font-size: 14px; color: #808080; font-weight: normal; font-style: normal; text-align: center; }
+.services-holder .service-element p {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  color: #808080;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+}
 
-.portfolio { background: #f7f7f7; height: -webkit-fit-content; height: -moz-fit-content; height: fit-content; }
+.portfolio {
+  background: #f7f7f7;
+  height: fit-content;
+}
 
-.portfolio .title-portfolio { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; }
+.portfolio .title-portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.portfolio .title-portfolio h2 { font-family: "Montserrat"; font-size: 40px; color: #000; font-weight: bold; font-style: normal; text-transform: uppercase; margin-top: 120px; margin-bottom: 0; }
+.portfolio .title-portfolio h2 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 0;
+}
 
-.portfolio .title-portfolio h6 { font-family: "EB Garamond", serif; font-size: 16px; color: #808080; font-weight: normal; font-style: italic; margin: 0; }
+.portfolio .title-portfolio h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
 
-.portfolio .projects-holder { margin: 80px 230px 120px 230px; }
+.portfolio .projects-holder {
+  margin: 80px 230px 120px 230px;
+}
 
-.portfolio .projects-holder .row { display: -ms-flexbox; display: flex; }
+.portfolio .projects-holder .row {
+  display: flex;
+}
 
-.portfolio .projects-holder .row .project-example { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; background: #fff; margin: 30px 16px; }
+.portfolio .projects-holder .row .project-example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 30px 16px;
+}
 
-.portfolio .projects-holder .row .project-example img { margin-bottom: 30px; }
+.portfolio .projects-holder .row .project-example img {
+  margin-bottom: 30px;
+}
 
-.portfolio .projects-holder .row .project-example h3 { font-family: "Montserrat"; font-size: 18px; color: #000; font-weight: bold; font-style: normal; margin: 0; }
+.portfolio .projects-holder .row .project-example h3 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0;
+}
 
-.portfolio .projects-holder .row .project-example h6 { font-family: "EB Garamond", serif; font-size: 14px; color: #808080; font-weight: normal; font-style: italic; margin: 0 0 30px 0; }
+.portfolio .projects-holder .row .project-example h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  color: #808080;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0 0 30px 0;
+}
 
-.about-us .title-about { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; }
+.about-us .title-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.about-us .title-about h2 { font-family: "Montserrat"; font-size: 40px; color: #000; font-weight: bold; font-style: normal; text-transform: uppercase; margin-top: 120px; margin-bottom: 0; }
+.about-us .title-about h2 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 0;
+}
 
-.about-us .title-about h6 { font-family: "EB Garamond", serif; font-size: 16px; color: #808080; font-weight: normal; font-style: italic; margin: 0; }
+.about-us .title-about h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
 
-.about-us .about-holder .about-element { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: row-reverse; flex-direction: row-reverse; margin-top: 80px; }
+.about-us .about-holder .about-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-top: 80px;
+}
 
-.about-us .about-holder .about-element .img-basket { position: absolute; }
+.about-us .about-holder .about-element .img-basket {
+  position: absolute;
+}
 
-.about-us .about-holder .about-element .description h4 { font-family: "Montserrat"; font-size: 18px; color: #000; font-weight: bold; font-style: normal; margin: 0; }
+.about-us .about-holder .about-element .description h4 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0;
+}
 
-.about-us .about-holder .about-element .description p { font-family: "EB Garamond", serif; font-size: 14px; color: #808080; font-weight: normal; font-style: normal; }
+.about-us .about-holder .about-element .description p {
+  font-family: "EB Garamond", serif;
+  font-size: 14px;
+  color: #808080;
+  font-weight: normal;
+  font-style: normal;
+}
 
-.about-us .about-holder .about-element .description-left { text-align: right; margin-right: 500px; }
+.about-us .about-holder .about-element .description-left {
+  text-align: right;
+  margin-right: 500px;
+}
 
-.about-us .about-holder .about-element .description-right { text-align: left; margin-left: 500px; }
+.about-us .about-holder .about-element .description-right {
+  text-align: left;
+  margin-left: 500px;
+}
 
-.about-us .about-holder .last-element { margin-bottom: 120px; }
+.about-us .about-holder .last-element {
+  margin-bottom: 120px;
+}
 
-.amazing-team { background: #f7f7f7; }
+.amazing-team {
+  background: #f7f7f7;
+}
 
-.amazing-team .title-team { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; }
+.amazing-team .title-team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.amazing-team .title-team h2 { font-family: "Montserrat"; font-size: 40px; color: #000; font-weight: bold; font-style: normal; text-transform: uppercase; margin-top: 120px; margin-bottom: 0; }
+.amazing-team .title-team h2 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 0;
+}
 
-.amazing-team .title-team h6 { font-family: "EB Garamond", serif; font-size: 16px; color: #808080; font-weight: normal; font-style: italic; margin: 0; }
+.amazing-team .title-team h6 {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
+
+.amazing-team .team-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.amazing-team .team-holder .team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.amazing-team .team-holder .team-member .member-photo {
+  background: #000;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.amazing-team .team-holder .team-member .member-caption h6 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.amazing-team .team-holder .team-member .member-caption p {
+  font-family: "Times New Roman";
+  font-size: 16px;
+  color: #808080;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  margin: 0;
+}
+
+.amazing-team .team-holder .team-member .member-media {
+  display: flex;
+}
+
+.amazing-team .team-holder .team-member .member-media .media-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 20px 5px;
+}
+
+.amazing-team .team-holder .team-member .member-media .facebook-circle {
+  border: 3px solid #3b5998;
+  color: #3b5998;
+}
+
+.amazing-team .team-holder .team-member .member-media .twitter-circle {
+  border: 3px solid #00aced;
+  color: #00aced;
+}
+
+.amazing-team .team-holder .team-member .member-media .pinterest-circle {
+  border: 3px solid #cb2028;
+  color: #cb2028;
+}
+
+.amazing-team .team-holder .team-member .member-media .google-circle {
+  border: 3px solid #d95232;
+  color: #d95232;
+}
+
+/*# sourceMappingURL=style.css.map */

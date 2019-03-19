@@ -6,6 +6,7 @@ $main-gray: #808080;
 $main-font: "Montserrat";
 $garamond-font: 'EB Garamond', serif;
 $dancing-script: 'Dancing Script', cursive;
+$times-font: 'Times New Roman';
 @mixin flexible($display, $align-items, $justify-content, $flex-direction) {
     display: $display;
     align-items: $align-items;
@@ -224,4 +225,55 @@ body{
             margin: 0;
         }   
     }
+    .team-holder {
+        @include flexible(flex, center, center, row);
+        .team-member {
+            @include flexible(flex, center, center, column);
+            margin-top: 80px;
+            .member-photo {
+                background: #000;
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;    
+            }
+            .member-caption {    
+                h6 {
+                    @include font-source($main-font, 16px, #000, bold, normal);
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+                p {    
+                    @include font-source($times-font, 16px, $main-gray, normal, normal);
+                    text-align: center;
+                    margin: 0;        
+                }    
+            }
+            .member-media {
+                display: flex;
+                .media-circle {
+                @include flexible(flex, center, center, initial);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin: 20px 5px;
+                }
+                .facebook-circle {
+                    border: 3px solid #3b5998;    
+                    color: #3b5998;
+                }
+                .twitter-circle {
+                    border: 3px solid #00aced;
+                    color: #00aced;    
+                }
+                .pinterest-circle {
+                    border: 3px solid #cb2028;
+                    color: #cb2028;    
+                }
+                .google-circle {
+                    border: 3px solid #d95232;
+                    color: #d95232;
+                }
+            }
+        }
+    }        
 }
