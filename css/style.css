@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
 .col-1 {
   width: 8.33%;
 }
@@ -54,8 +55,37 @@ body {
   width: 1400px;
 }
 
+.btn {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  font-style: normal;
+  background: #fed136;
+  width: 240px;
+  height: 65px;
+  margin-bottom: 160px;
+  border-width: 0;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+h6 {
+  font-family: "EB Garamond",serif;
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
+
 .hero {
   background-image: url("./images/background-head.jpg");
+  background-size: cover;
 }
 
 .hero header {
@@ -66,7 +96,7 @@ body {
 }
 
 .hero header .logo {
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script",cursive;
   font-size: 26px;
   color: #fed136;
   font-weight: normal;
@@ -107,31 +137,12 @@ body {
 }
 
 .hero .home h2 {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond",serif;
   font-size: 40px;
   color: #fff;
   font-weight: normal;
   font-style: italic;
   margin-bottom: 50px;
-}
-
-.hero .home .btn-home {
-  font-family: "Montserrat";
-  font-size: 18px;
-  color: #fff;
-  font-weight: bold;
-  font-style: normal;
-  background: #fed136;
-  width: 240px;
-  height: 65px;
-  margin-bottom: 160px;
-  border-width: 0;
-  text-transform: uppercase;
-  border-radius: 2px;
-}
-
-.hero .home .btn-home:hover {
-  cursor: pointer;
 }
 
 .title-services {
@@ -150,15 +161,6 @@ body {
   text-transform: uppercase;
   margin-top: 120px;
   margin-bottom: 0;
-}
-
-.title-services h6 {
-  font-family: "EB Garamond", serif;
-  font-size: 16px;
-  color: #808080;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0;
 }
 
 .services-holder {
@@ -204,9 +206,9 @@ body {
 }
 
 .services-holder .service-element p {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond",serif;
   font-size: 14px;
-  color: #808080;
+  color: gray;
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -214,6 +216,8 @@ body {
 
 .portfolio {
   background: #f7f7f7;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -233,15 +237,6 @@ body {
   text-transform: uppercase;
   margin-top: 120px;
   margin-bottom: 0;
-}
-
-.portfolio .title-portfolio h6 {
-  font-family: "EB Garamond", serif;
-  font-size: 16px;
-  color: #808080;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0;
 }
 
 .portfolio .projects-holder {
@@ -274,10 +269,10 @@ body {
   margin: 0;
 }
 
-.portfolio .projects-holder .row .project-example h6 {
-  font-family: "EB Garamond", serif;
-  font-size: 14px;
-  color: #808080;
+.portfolio .projects-holder .row .project-example h5 {
+  font-family: "EB Garamond",serif;
+  font-size: 16px;
+  color: gray;
   font-weight: normal;
   font-style: italic;
   margin: 0 0 30px 0;
@@ -299,15 +294,6 @@ body {
   text-transform: uppercase;
   margin-top: 120px;
   margin-bottom: 0;
-}
-
-.about-us .title-about h6 {
-  font-family: "EB Garamond", serif;
-  font-size: 16px;
-  color: #808080;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0;
 }
 
 .about-us .about-holder .about-element {
@@ -332,9 +318,9 @@ body {
 }
 
 .about-us .about-holder .about-element .description p {
-  font-family: "EB Garamond", serif;
+  font-family: "EB Garamond",serif;
   font-size: 14px;
-  color: #808080;
+  color: gray;
   font-weight: normal;
   font-style: normal;
 }
@@ -355,6 +341,9 @@ body {
 
 .amazing-team {
   background: #f7f7f7;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .amazing-team .title-team {
@@ -373,15 +362,6 @@ body {
   text-transform: uppercase;
   margin-top: 120px;
   margin-bottom: 0;
-}
-
-.amazing-team .title-team h6 {
-  font-family: "EB Garamond", serif;
-  font-size: 16px;
-  color: #808080;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0;
 }
 
 .amazing-team .team-holder {
@@ -406,7 +386,7 @@ body {
   border-radius: 50%;
 }
 
-.amazing-team .team-holder .team-member .member-caption h6 {
+.amazing-team .team-holder .team-member .member-caption h5 {
   font-family: "Montserrat";
   font-size: 16px;
   color: #000;
@@ -419,7 +399,7 @@ body {
 .amazing-team .team-holder .team-member .member-caption p {
   font-family: "Times New Roman";
   font-size: 16px;
-  color: #808080;
+  color: gray;
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -437,28 +417,165 @@ body {
   flex-direction: initial;
   width: 30px;
   height: 30px;
+  border: 3px solid;
   border-radius: 50%;
   margin: 20px 5px;
 }
 
 .amazing-team .team-holder .team-member .member-media .facebook-circle {
-  border: 3px solid #3b5998;
+  border-color: #3b5998;
   color: #3b5998;
 }
 
 .amazing-team .team-holder .team-member .member-media .twitter-circle {
-  border: 3px solid #00aced;
+  border-color: #00aced;
   color: #00aced;
 }
 
 .amazing-team .team-holder .team-member .member-media .pinterest-circle {
-  border: 3px solid #cb2028;
+  border-color: #cb2028;
   color: #cb2028;
 }
 
 .amazing-team .team-holder .team-member .member-media .google-circle {
-  border: 3px solid #d95232;
+  border-color: #d95232;
   color: #d95232;
+}
+
+.amazing-team .description p {
+  font-family: "Roboto Slab",serif;
+  font-size: 16px;
+  color: gray;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 120px;
+}
+
+.contact {
+  background-image: url("./images/background-footer.jpg");
+  background-size: cover;
+}
+
+.contact .contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact .contact-title h2 {
+  font-family: "Montserrat";
+  font-size: 40px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 120px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.contact .contact-title h6 {
+  color: #777;
+}
+
+.contact .contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+.contact .contact-form input, .contact .contact-form textarea {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #dfdfdf;
+  font-weight: bold;
+  font-style: normal;
+  width: 440px;
+  height: 50px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  padding: 0 0 0 20px;
+  border-radius: 2px;
+  border-width: 0;
+}
+
+.contact .contact-form textarea {
+  height: 190px;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.contact .btn-send-holder {
+  text-align: center;
+}
+
+.contact .btn-send-holder .btn-send {
+  margin-bottom: 115px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+.footer .copyright {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #555;
+  font-weight: normal;
+  font-style: normal;
+  margin-right: 550px;
+}
+
+.footer .media-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  position: absolute;
+}
+
+.footer .media-holder .media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: initial;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  margin: 5px;
+}
+
+.footer .media-holder .media-twitter {
+  background-color: #00aced;
+}
+
+.footer .media-holder .media-facebook {
+  background-color: #3b5998;
+}
+
+.footer .media-holder .media-pinterest {
+  background-color: #cb2028;
+}
+
+.footer .media-holder .media-google {
+  background-color: #d95232;
 }
 
 /*# sourceMappingURL=style.css.map */

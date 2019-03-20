@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
 $main-gold: #fed136;
 $main-gray: #808080;
+$background-gray: #f7f7f7;
 $main-font: "Montserrat";
 $garamond-font: 'EB Garamond', serif;
 $dancing-script: 'Dancing Script', cursive;
 $times-font: 'Times New Roman';
+$roboto-font: 'Roboto Slab', serif;
 @mixin flexible($display, $align-items, $justify-content, $flex-direction) {
     display: $display;
     align-items: $align-items;
@@ -20,6 +23,12 @@ $times-font: 'Times New Roman';
     font-weight: $font-weight;
     font-style: $font-style;
 }
+@mixin section-title {
+    @include font-source($main-font, 40px, #000, bold, normal);
+    text-transform: uppercase;
+    margin-top: 120px;
+    margin-bottom: 0;
+}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -32,12 +41,32 @@ $times-font: 'Times New Roman';
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
 body{
     max-width: 1400px;
     width: 1400px;
 }
+.btn {
+    @include font-source($main-font, 18px, #fff, bold, normal);
+    background: $main-gold;
+    width: 240px;
+    height: 65px;
+    margin-bottom: 160px;
+    border-width: 0;
+    text-transform: uppercase;
+    border-radius: 2px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+h6 {
+    @include font-source($garamond-font, 16px, $main-gray, normal, italic);
+    margin: 0;
+}
+    // HERO SECTION
 .hero {                                                   
     background-image: url("./images/background-head.jpg"); // Dlaczego szuka w pliku css i nie da się tego pominąć?
+    background-size: cover;
     header {
         @include flexible(flex, baseline, space-evenly, unset);
         .logo {
@@ -68,33 +97,13 @@ body{
             @include font-source($garamond-font, 40px, #fff, normal, italic);
             margin-bottom: 50px;
         }
-        .btn-home {
-            @include font-source($main-font, 18px, #fff, bold, normal);
-            background: $main-gold;
-            width: 240px;
-            height: 65px;
-            margin-bottom: 160px;
-            border-width: 0;
-            text-transform: uppercase;
-            border-radius: 2px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
     }   
 }
                                                 // SECTION SERVICES
 .title-services {
     @include flexible(flex, center, center, column);
     h2 {
-        @include font-source($main-font, 40px, #000, bold, normal);
-        text-transform: uppercase;
-        margin-top: 120px;
-        margin-bottom: 0;
-    }
-    h6 {
-        @include font-source($garamond-font, 16px, $main-gray, normal, italic);
-        margin: 0;
+        @include section-title;
     }
 }
 .services-holder {
@@ -126,19 +135,12 @@ body{
 }                                                
                                                             // PORTFOLIO
 .portfolio {
-    background: #f7f7f7;
+    background: $background-gray;
     height: fit-content;
     .title-portfolio {
         @include flexible(flex, center, center, column);
         h2 {
-            @include font-source($main-font, 40px, #000, bold, normal);
-            text-transform: uppercase;
-            margin-top: 120px;
-            margin-bottom: 0;
-        }
-        h6 {
-            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
-            margin: 0;
+            @include section-title;
         }
     }
     .projects-holder {
@@ -156,8 +158,8 @@ body{
                     @include font-source($main-font, 18px, #000, bold, normal);
                     margin: 0;
                 }
-                h6 {
-                    @include font-source($garamond-font, 14px, $main-gray, normal, italic);
+                h5 {
+                    @include font-source($garamond-font, 16px, $main-gray, normal, italic);
                     margin: 0 0 30px 0;
                 }
             }   
@@ -169,14 +171,7 @@ body{
     .title-about {
         @include flexible(flex, center, center, column);
         h2 {
-            @include font-source($main-font, 40px, #000, bold, normal);
-            text-transform: uppercase;
-            margin-top: 120px;
-            margin-bottom: 0;
-        }
-        h6 {
-            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
-            margin: 0;
+            @include section-title;
         }
     }
     .about-holder {    
@@ -211,19 +206,13 @@ body{
 }  
                                                 // AMAZING TEAM         
 .amazing-team {
-    background: #f7f7f7;
+    background: $background-gray;
+    height: fit-content;
     .title-team {
         @include flexible(flex, center, center, column);
         h2 {
-            @include font-source($main-font, 40px, #000, bold, normal);
-            text-transform: uppercase;
-            margin-top: 120px;
-            margin-bottom: 0;
+            @include section-title;
         }
-        h6 {
-            @include font-source($garamond-font, 16px, $main-gray, normal, italic);
-            margin: 0;
-        }   
     }
     .team-holder {
         @include flexible(flex, center, center, row);
@@ -237,7 +226,7 @@ body{
                 border-radius: 50%;    
             }
             .member-caption {    
-                h6 {
+                h5 {
                     @include font-source($main-font, 16px, #000, bold, normal);
                     margin-bottom: 0;
                     text-align: center;
@@ -254,26 +243,110 @@ body{
                 @include flexible(flex, center, center, initial);
                 width: 30px;
                 height: 30px;
+                border: 3px solid;
                 border-radius: 50%;
                 margin: 20px 5px;
                 }
                 .facebook-circle {
-                    border: 3px solid #3b5998;    
+                    border-color: #3b5998;    
                     color: #3b5998;
                 }
                 .twitter-circle {
-                    border: 3px solid #00aced;
+                    border-color: #00aced;
                     color: #00aced;    
                 }
                 .pinterest-circle {
-                    border: 3px solid #cb2028;
+                    border-color: #cb2028;
                     color: #cb2028;    
                 }
                 .google-circle {
-                    border: 3px solid #d95232;
+                    border-color: #d95232;
                     color: #d95232;
                 }
             }
+        }    
+    } 
+    .description {
+        p {
+            @include font-source($roboto-font, 16px, $main-gray, normal, normal); // Czcionka nie działa! net::ERR_ABORTED 400
+            text-align: center;
+            margin-bottom: 120px;   
         }
-    }        
+    }       
+}
+.logos {
+    @include flexible(flex, center, center, row);
+    margin: 120px;
+}
+.contact {
+    background-image: url('./images/background-footer.jpg');
+    background-size: cover;
+    .contact-title {
+        @include flexible(flex, center, center, column);
+        h2 {
+            @include section-title;
+            color: #fff;
+        }
+        h6 {
+            color: #777;
+        }
+    }
+    .contact-form {
+        @include flexible(flex, center, center, row);
+        margin-top: 80px;
+        input, textarea {
+            @include font-source($main-font, 14px, #dfdfdf, bold, normal);
+            width: 440px;
+            height: 50px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            padding: 0 0 0 20px;
+            border-radius: 2px;
+            border-width: 0;    
+        }
+        textarea {
+            height: 190px;
+            margin-left: 30px;
+            padding-top: 20px;    
+        }    
+    }
+    .btn-send-holder {
+        text-align: center;
+    .btn-send {
+        margin-bottom: 115px;
+    }
+    }
+}
+// FOOTER
+.footer {
+    @include flexible(flex, center, center, row);
+    margin: 20px 0;
+    .copyright {
+        @include font-source($main-font, 14px, #555, normal, normal);
+        margin-right: 550px;
+    }
+    .media-holder {
+        @include flexible(flex, center, center, initial);
+        position: absolute;
+        .media {
+            @include flexible(flex, center, center, initial);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            margin: 5px;
+        }
+        .media-twitter {
+            background-color: #00aced;
+        }
+        .media-facebook {
+            background-color: #3b5998;
+        }
+        .media-pinterest {
+            background-color: #cb2028;
+        }
+        .media-google {
+            background-color: #d95232;
+        }
+    }
 }
