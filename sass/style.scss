@@ -2,49 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
-$main-gold: #fed136;
-$main-gray: #808080;
-$background-gray: #f7f7f7;
-$main-font: "Montserrat";
-$garamond-font: 'EB Garamond', serif;
-$dancing-script: 'Dancing Script', cursive;
-$times-font: 'Times New Roman';
-$roboto-font: 'Roboto Slab', serif;
-@mixin flexible($display, $align-items, $justify-content, $flex-direction) {
-    display: $display;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    flex-direction: $flex-direction;
-}
-@mixin font-source($font-family, $font-size, $color, $font-weight, $font-style) {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: $color;
-    font-weight: $font-weight;
-    font-style: $font-style;
-}
-@mixin section-title {
-    @include font-source($main-font, 40px, #000, bold, normal);
-    text-transform: uppercase;
-    margin-top: 120px;
-    margin-bottom: 0;
-}
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+@import "mixins";
 
-body{
+body {
     max-width: 1400px;
-    width: 1400px;
+    box-sizing: border-box;
 }
 .btn {
     @include font-source($main-font, 18px, #fff, bold, normal);
@@ -60,12 +22,12 @@ body{
     }
 }
 h6 {
-    @include font-source($garamond-font, 16px, $main-gray, normal, italic);
+    @include font-source($garamond-font, 18px, $main-gray, normal, italic);
     margin: 0;
 }
     // HERO SECTION
 .hero {                                                   
-    background-image: url("./images/background-head.jpg"); // Dlaczego szuka w pliku css i nie da się tego pominąć?
+    background-image: url("../images/background/background-head.jpg");
     background-size: cover;
     header {
         @include flexible(flex, baseline, space-evenly, unset);
@@ -102,6 +64,7 @@ h6 {
                                                 // SECTION SERVICES
 .title-services {
     @include flexible(flex, center, center, column);
+    margin-top: 120px;
     h2 {
         @include section-title;
     }
@@ -112,6 +75,7 @@ h6 {
     .service-element {
        @include flexible(flex, center, center, column);
        margin: 20px 16px;
+        height: fit-content;
        .icon-basket{
             @include flexible(flex, center, center, initial);
             width: 60px;
@@ -128,17 +92,19 @@ h6 {
            @include font-source($main-font, 18px, #000, bold, normal);
        }
        p {
-            @include font-source($garamond-font, 14px, $main-gray, normal, normal);
+            @include font-source($garamond-font, 15px, $main-gray, normal, normal);
             text-align: center;
        }
    }
 }                                                
                                                             // PORTFOLIO
 .portfolio {
+    display: block;
     background: $background-gray;
     height: fit-content;
     .title-portfolio {
         @include flexible(flex, center, center, column);
+        padding-top: 120px;
         h2 {
             @include section-title;
         }
@@ -170,6 +136,7 @@ h6 {
 .about-us {
     .title-about {
         @include flexible(flex, center, center, column);
+        margin-top: 120px;
         h2 {
             @include section-title;
         }
@@ -187,7 +154,7 @@ h6 {
                     margin: 0;
                 }
                 p {
-                    @include font-source($garamond-font, 14px, $main-gray, normal, normal);
+                    @include font-source($garamond-font, 16px, $main-gray, normal, normal);
                 }
             }
             .description-left {
@@ -210,6 +177,7 @@ h6 {
     height: fit-content;
     .title-team {
         @include flexible(flex, center, center, column);
+        padding-top: 120px;
         h2 {
             @include section-title;
         }
@@ -274,15 +242,17 @@ h6 {
         }
     }       
 }
+//                                              CONTACT
 .logos {
     @include flexible(flex, center, center, row);
     margin: 120px;
 }
 .contact {
-    background-image: url('./images/background-footer.jpg');
+    background-image: url('../images/background/background-footer.jpg');
     background-size: cover;
     .contact-title {
         @include flexible(flex, center, center, column);
+        padding-top: 120px;
         h2 {
             @include section-title;
             color: #fff;
@@ -317,7 +287,7 @@ h6 {
     }
     }
 }
-// FOOTER
+                                            // FOOTER
 .footer {
     @include flexible(flex, center, center, row);
     margin: 20px 0;
@@ -347,6 +317,45 @@ h6 {
         }
         .media-google {
             background-color: #d95232;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .col-md-12 {
+        width: 100%;    
+    }
+    .col-md-6 {
+        width: 50%
+    }
+    .services-holder {
+        display: block;
+    }
+    .amazing-team {
+        .team-holder {
+            display: block;
+        } 
+    }
+    .portfolio {
+        .projects-holder {
+            .row {
+                display: block;
+                .project-example {
+                 margin: inherit;
+                }
+            }
+        }
+    }
+    .contact {
+        .contact-form {
+            display: block;
+            textarea {
+                margin-left: 0;
+            }  
         }
     }
 }
