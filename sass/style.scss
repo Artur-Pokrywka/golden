@@ -1,0 +1,125 @@
+@import "normalize";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
+.col-1{width:8.33%}
+.col-2{width:16.66%}
+.col-3{width:25%}
+.col-4{width:33.33%}
+.col-5{width:41.66%}
+.col-6{width:50%}
+.col-7{width:58.33%}
+.col-8{width:66.66%}.col-9{width:75%}
+.col-10{width:83.33%}.col-11{width:91.66%}
+.col-12{width:100%}
+
+$monty-font: "Montserrat";
+// $times-font: 'Times New Roman';
+$dirty-gold: #b88b58;
+
+@mixin font-source($font-family, $font-size, $color, $font-weight, $font-style) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+@mixin flexible($display, $align-items, $justify-content, $flex-direction) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+// $main-gray: #808080;
+// $background-gray: #f7f7f7;
+// $garamond-font: 'EB Garamond', serif;
+// $dancing-script: 'Dancing Script', cursive;
+
+
+ 
+.header {
+    nav,ul {
+        background-color: #000;
+        height: 90px;
+        ul {
+            @include font-source($monty-font, 14px, #fff, bold, normal);
+            @include flexible(flex, center, center, unset);
+            list-style-type: none;
+            text-transform: uppercase;
+            line-height: 18px; 
+            margin: 0;
+            li {
+                margin: 0 8px;
+                a {
+                    @include font-source($monty-font, 14px, #fff, bold, normal);
+                    text-decoration: none;
+                    padding: 32px 0; 
+                    &:hover {
+                        border-bottom: 4px solid $dirty-gold; 
+                    }   
+                }
+            }
+        }
+    }
+    .hero {
+        height: calc(100vh - 90px);
+        background-image: url("../images/header-background.jpg");
+        background-size: cover; 
+        text-align: center;
+        h1 {
+            @include font-source($monty-font, 72px, #fff, bold, normal);
+            line-height: 69px;
+            text-transform: uppercase;
+            margin: 0;
+            .communication {
+                color: $dirty-gold;
+            }
+        } 
+        h3 {
+            @include font-source($monty-font, 24px, #fff, 600, normal);
+            line-height: 18px;
+            text-transform: uppercase;
+        }
+        .btn-contact {
+            @include font-source($monty-font, 12px, #fff, bold, normal);
+            text-transform: uppercase;
+            line-height: 18px;
+            background-color: $dirty-gold;
+            width: 190px;
+            height: 45px;
+            border: none;
+            border-radius: 12px;
+            outline: none;
+            &:hover {
+                cursor: pointer;
+            }  
+            &:active {
+                background-color: #000;   
+            }  
+        }
+        .pagination-container {
+            .dot { 
+                width: 15px;
+                height: 15px;
+                border: 2px solid $dirty-gold;
+                border-radius: 50%; 
+                margin: 0 2px;
+                background: transparent;
+            }    
+            .active {
+                background-color: $dirty-gold;
+            }  
+        }
+    }
+}
+
+
+
+
+#logo {
+    height: 60px;
+    margin-right: 90px;
+}
