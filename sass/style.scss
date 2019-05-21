@@ -21,16 +21,34 @@
 }
 
 // GENERAL
-.nav-list{
+.nav-list {
     list-style-type: none;
     text-transform: uppercase;
     line-height: 18px;
     margin: 0;
 }
 
+.dot { 
+    width: 15px;
+    height: 15px;
+    border: 2px solid $dirty-gold;
+    border-radius: 50%; 
+    margin: 0 2px;
+    background: transparent;
+}    
+
 a {
     text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+} 
 
 .btn {
     background: $dirty-gold;
@@ -54,7 +72,6 @@ a {
 }
 
 .title-container {
-    text-transform: uppercase;
     text-align: center;
     padding: 60px 0;
     h2 {
@@ -68,7 +85,8 @@ a {
 }
 // SECTION HEADER
 .header {
-    .navbar,ul {
+    .navbar,
+    ul {
         background-color: #000;
         height: 90px;
         .main-nav-list {
@@ -99,7 +117,6 @@ a {
         h1 {
             @include font-source($main-font, 72px, #fff, bold, normal);
             line-height: 69px;
-            text-transform: uppercase;
             margin: 0;
             .communication {
                 color: $dirty-gold;
@@ -108,19 +125,10 @@ a {
         h3 {
             @include font-source($main-font, 24px, #fff, 600, normal);
             line-height: 18px;
-            text-transform: uppercase;
         }
         .pagination-container {
             position: absolute;
             bottom: 20px;
-            .dot { 
-                width: 15px;
-                height: 15px;
-                border: 2px solid $dirty-gold;
-                border-radius: 50%; 
-                margin: 0 2px;
-                background: transparent;
-            }    
             .active {
                 background-color: $dirty-gold;
             }  
@@ -168,7 +176,6 @@ a {
             text-align: center;
             h3 {
                 @include font-source($main-font, 18px, #fff, 600, normal);
-                text-transform: uppercase
             }
             p {
                 @include font-source($main-font, 12px, $description-gray, 400, normal);
@@ -217,6 +224,89 @@ a {
     }
     .btn-container {
         @include flexible(flex, center, center, unset);
+    }
+}
+// SECTION TEAM
+.our-team {
+    background-image: url("../images/team-background.jpg"); 
+    position: relative;
+    padding-bottom: 80px; 
+    h2 {
+        color: #fff;
+    }
+    .team-container {
+        @include flexible(flex, center, center, row);
+        .team-member {
+            @include flexible(flex, center, center, column);
+            background: #fff;
+            margin: 0 15px;
+            img {
+                margin-top: 45px;
+            }
+            h5 {
+                @include font-source($main-font, 24px, #000, 500, normal);
+                margin-bottom: 0;
+            }
+            .worker-caption {
+                @include font-source($main-font, 14px, #000, 400, normal);
+            }
+            .media-container {
+                @include flexible(flex, center, center, row);
+                margin: 30px 0; 
+                .media-item {
+                    background-color: #bebebe; 
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%; 
+                    margin: 0 3.5px;
+                    &:hover {
+                        background: $dirty-gold;
+                    }
+                    .fab,
+                    .fas {
+                        @include flexible(flex, center, center, row);
+                        color: #fff;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    } 
+    .auxiliary-container {
+        @include flexible(flex, center, center, unset);
+        .pagination-container {
+            position: absolute;
+            bottom: 10px;
+            .active {
+                background-color: $dirty-gold;
+            }  
+        }
+    }
+}
+// HAPPY CLIENTS
+.happy-clients {
+    background: $background-gray;
+    .pr-head {
+        @include flexible(flex, center, center, column);
+        .worker-name {
+            @include font-source($main-font, 24px, #000, bold, normal);
+            line-height: 18px;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+        .worker-caption {
+            @include font-source($main-font, 18px, #000, 600, normal);
+            line-height: 18px;
+            margin-top: 0px;
+        }
+        .quotes {
+            @include font-source($font-times, 18px, #7e7e7e, 600, normal); 
+        }
+        .worker-caption {
+            @include font-source($main-font, 14px, #7e7e7e, 300, normal);
+            line-height: 25px;
+            margin-top: 0px;
+        }
     }
 }
 

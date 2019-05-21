@@ -396,8 +396,26 @@ template {
   margin: 0;
 }
 
+.dot {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #b88b58;
+  border-radius: 50%;
+  margin: 0 2px;
+  background: transparent;
+}
+
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }
 
 .btn {
@@ -428,7 +446,6 @@ a {
 }
 
 .title-container {
-  text-transform: uppercase;
   text-align: center;
   padding: 60px 0;
 }
@@ -451,12 +468,14 @@ a {
   font-style: normal;
 }
 
-.header .navbar, .header ul {
+.header .navbar,
+.header ul {
   background-color: #000;
   height: 90px;
 }
 
-.header .navbar .main-nav-list, .header ul .main-nav-list {
+.header .navbar .main-nav-list,
+.header ul .main-nav-list {
   font-family: "Montserrat";
   font-size: 14px;
   color: #fff;
@@ -468,16 +487,19 @@ a {
   flex-direction: unset;
 }
 
-.header .navbar .main-nav-list #logo, .header ul .main-nav-list #logo {
+.header .navbar .main-nav-list #logo,
+.header ul .main-nav-list #logo {
   height: 60px;
   margin-right: 90px;
 }
 
-.header .navbar .main-nav-list li, .header ul .main-nav-list li {
+.header .navbar .main-nav-list li,
+.header ul .main-nav-list li {
   margin: 0 8px;
 }
 
-.header .navbar .main-nav-list li a, .header ul .main-nav-list li a {
+.header .navbar .main-nav-list li a,
+.header ul .main-nav-list li a {
   font-family: "Montserrat";
   font-size: 14px;
   color: #fff;
@@ -486,7 +508,8 @@ a {
   padding: 32px 0;
 }
 
-.header .navbar .main-nav-list li a:hover, .header ul .main-nav-list li a:hover {
+.header .navbar .main-nav-list li a:hover,
+.header ul .main-nav-list li a:hover {
   border-bottom: 4px solid #b88b58;
 }
 
@@ -508,7 +531,6 @@ a {
   font-weight: bold;
   font-style: normal;
   line-height: 69px;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -523,21 +545,11 @@ a {
   font-weight: 600;
   font-style: normal;
   line-height: 18px;
-  text-transform: uppercase;
 }
 
 .header .hero .pagination-container {
   position: absolute;
   bottom: 20px;
-}
-
-.header .hero .pagination-container .dot {
-  width: 15px;
-  height: 15px;
-  border: 2px solid #b88b58;
-  border-radius: 50%;
-  margin: 0 2px;
-  background: transparent;
 }
 
 .header .hero .pagination-container .active {
@@ -605,7 +617,6 @@ a {
   color: #fff;
   font-weight: 600;
   font-style: normal;
-  text-transform: uppercase;
 }
 
 .services .our-services .service p {
@@ -688,6 +699,139 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: unset;
+}
+
+.our-team {
+  background-image: url("../images/team-background.jpg");
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.our-team h2 {
+  color: #fff;
+}
+
+.our-team .team-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.our-team .team-container .team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 0 15px;
+}
+
+.our-team .team-container .team-member img {
+  margin-top: 45px;
+}
+
+.our-team .team-container .team-member h5 {
+  font-family: "Montserrat";
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.our-team .team-container .team-member .worker-caption {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.our-team .team-container .team-member .media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 30px 0;
+}
+
+.our-team .team-container .team-member .media-container .media-item {
+  background-color: #bebebe;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 3.5px;
+}
+
+.our-team .team-container .team-member .media-container .media-item:hover {
+  background: #b88b58;
+}
+
+.our-team .team-container .team-member .media-container .media-item .fab,
+.our-team .team-container .team-member .media-container .media-item .fas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #fff;
+  padding: 5px;
+}
+
+.our-team .auxiliary-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: unset;
+}
+
+.our-team .auxiliary-container .pagination-container {
+  position: absolute;
+  bottom: 10px;
+}
+
+.our-team .auxiliary-container .pagination-container .active {
+  background-color: #b88b58;
+}
+
+.happy-clients {
+  background: #f7f7f7;
+}
+
+.happy-clients .pr-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.happy-clients .pr-head .worker-name {
+  font-family: "Montserrat";
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.happy-clients .pr-head .worker-caption {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 18px;
+  margin-top: 0px;
+}
+
+.happy-clients .pr-head .quotes {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #7e7e7e;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

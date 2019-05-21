@@ -9,8 +9,7 @@ function displayForm() {
 };
 
 // services
-var serviceDescriprion = "Praesent metus urna, feugiat placerat elementum";
-
+var serviceDescriprion = 'Praesent metus urna, feugiat placerat elementum';
 var services = [
     {
         name: "high quality design",
@@ -28,15 +27,6 @@ var services = [
         name: "fast and free support",
         description: serviceDescriprion
     },
-    // {
-    //     name: "ready for customize",
-    //     description: serviceDescriprion
-    // },
-    // {
-    //     name: "adaptive layout",
-    //     description: serviceDescriprion
-    // }
-
 ];
 
 function getTemplateForService(services) {
@@ -58,7 +48,3 @@ function renderServices() {
 }
 renderServices();
  
- 
-
-// console.log(services[0].description);
-
