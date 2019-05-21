@@ -1,22 +1,9 @@
 @import "normalize";
+@import "variables"; 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
-.col-1{width:8.33%}
-.col-2{width:16.66%}
-.col-3{width:25%}
-.col-4{width:33.33%}
-.col-5{width:41.66%}
-.col-6{width:50%}
-.col-7{width:58.33%}
-.col-8{width:66.66%}.col-9{width:75%}
-.col-10{width:83.33%}.col-11{width:91.66%}
-.col-12{width:100%}
-
-$monty-font: "Montserrat";
-// $times-font: 'Times New Roman';
-$dirty-gold: #b88b58;
 
 @mixin font-source($font-family, $font-size, $color, $font-weight, $font-style) {
     font-family: $font-family;
@@ -33,44 +20,84 @@ $dirty-gold: #b88b58;
     flex-direction: $flex-direction;
 }
 
-// $main-gray: #808080;
-// $background-gray: #f7f7f7;
-// $garamond-font: 'EB Garamond', serif;
-// $dancing-script: 'Dancing Script', cursive;
+// GENERAL
+.nav-list{
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height: 18px;
+    margin: 0;
+}
 
+a {
+    text-decoration: none;
+}
 
- 
+.btn {
+    background: $dirty-gold;
+    line-height: 18px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }  
+    &:active {
+        background-color: #000;   
+    }  
+}
+    
+.btn-main {
+    @include font-source($main-font, 12px, #fff, bold, normal);
+    width: 190px;
+    height: 45px;
+    border-radius: 12px;
+}
+
+.title-container {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 60px 0;
+    h2 {
+        @include font-source($main-font, 25px, #000, 600, normal);
+        line-height: 30px;
+        margin: 0;
+    }
+    h4 {
+        @include font-source($main-font, 12px, $font-gray, 600, normal);
+    }
+}
+// SECTION HEADER
 .header {
-    nav,ul {
+    .navbar,ul {
         background-color: #000;
         height: 90px;
-        ul {
-            @include font-source($monty-font, 14px, #fff, bold, normal);
+        .main-nav-list {
+            @include font-source($main-font, 14px, #fff, bold, normal);
             @include flexible(flex, center, center, unset);
-            list-style-type: none;
-            text-transform: uppercase;
-            line-height: 18px; 
-            margin: 0;
+            #logo {
+                height: 60px;
+                margin-right: 90px;
+            } 
             li {
                 margin: 0 8px;
                 a {
-                    @include font-source($monty-font, 14px, #fff, bold, normal);
-                    text-decoration: none;
+                    @include font-source($main-font, 14px, #fff, bold, normal);
                     padding: 32px 0; 
                     &:hover {
                         border-bottom: 4px solid $dirty-gold; 
                     }   
                 }
-            }
+            } 
         }
     }
     .hero {
+        @include flexible(flex, center, center, column);
         height: calc(100vh - 90px);
         background-image: url("../images/header-background.jpg");
         background-size: cover; 
         text-align: center;
         h1 {
-            @include font-source($monty-font, 72px, #fff, bold, normal);
+            @include font-source($main-font, 72px, #fff, bold, normal);
             line-height: 69px;
             text-transform: uppercase;
             margin: 0;
@@ -79,28 +106,13 @@ $dirty-gold: #b88b58;
             }
         } 
         h3 {
-            @include font-source($monty-font, 24px, #fff, 600, normal);
+            @include font-source($main-font, 24px, #fff, 600, normal);
             line-height: 18px;
             text-transform: uppercase;
-        }
-        .btn-contact {
-            @include font-source($monty-font, 12px, #fff, bold, normal);
-            text-transform: uppercase;
-            line-height: 18px;
-            background-color: $dirty-gold;
-            width: 190px;
-            height: 45px;
-            border: none;
-            border-radius: 12px;
-            outline: none;
-            &:hover {
-                cursor: pointer;
-            }  
-            &:active {
-                background-color: #000;   
-            }  
         }
         .pagination-container {
+            position: absolute;
+            bottom: 20px;
             .dot { 
                 width: 15px;
                 height: 15px;
@@ -114,12 +126,100 @@ $dirty-gold: #b88b58;
             }  
         }
     }
+    .btn-call-us {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: -30px;
+        margin-left: 90%; 
+    }
+}
+
+// SECTION ABUT US
+.about-us {
+    background: $background-gray;
+    margin-top: -30px; 
+    .about-us-info{
+        @include font-source($main-font, 14px, #000, 200, normal);
+        @include flexible(flex, unset, center, unset);
+        padding-bottom: 90px;
+        line-height: 25px;
+        .description {
+            p {
+                margin: 0 30px 35px 0;
+            }
+        }
+        .video {
+            background-size: cover;
+        }
+    }
+}
+
+// /SECTION SERVICES
+.services {
+    background: #000;
+    h2 {
+        color: #fff;
+    }
+    .our-services {
+        @include flexible(flex, center, center, row);
+        padding-bottom: 75px; 
+        .service {
+            text-align: center;
+            h3 {
+                @include font-source($main-font, 18px, #fff, 600, normal);
+                text-transform: uppercase
+            }
+            p {
+                @include font-source($main-font, 12px, $description-gray, 400, normal);
+            }
+        }
+    }
+}
+// SECTION PROJECTS
+.projects {
+    background: $background-gray;
+    padding-bottom: 55px;
+    .projects-nav-list {
+        @include flexible(flex, center, center, unset);
+        border: 1px solid #cfcfcf;
+        border-radius: 40px; 
+        height: 55px;
+        width: fit-content;
+        padding: 0;
+        margin: 0 auto;
+        li {
+            @include flexible(flex, center, center, unset);
+            border-right: 1px solid #cfcfcf;
+            padding: 0 40px;
+            &:last-child {
+                border: none;
+            }
+            a {
+                @include flexible(flex, center, center, unset);
+                @include font-source($main-font, 14px, #000, 200, normal);
+                height: 51px;
+                &:hover {
+                    border-bottom: 4px solid $dirty-gold; 
+                } 
+            }
+        } 
+    }
+    .photos-container {
+        @include flexible(flex, center, center, unset);
+        margin: 40px 40px 0px 40px;
+        .photos-column {
+        @include flexible(flex, center, center, column);
+            img {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .btn-container {
+        @include flexible(flex, center, center, unset);
+    }
 }
 
 
 
 
-#logo {
-    height: 60px;
-    margin-right: 90px;
-}

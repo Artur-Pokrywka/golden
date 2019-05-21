@@ -12,8 +12,8 @@
 <body>
     <!-- HEADER -->
     <section class="header">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <ul class="nav-list main-nav-list">
                 <img src="./images/logo.png" alt="logo" id="logo">
                 <li><a href="#">home</a></li>
                 <li><a href="#">about us</a></li>
@@ -31,13 +31,88 @@
                 <h1>design is about <br>
                     <span class="communication">communication</span> </h1>
                 <h3>call us: +00 0 1234 5678</h3>
-                <button class="btn btn-contact" id="contact-button">get in touch!</button>
+                <button class="btn btn-main">get in touch!</button>
             </div>
             <div class="pagination-container">
                 <button class="dot active"></button>
                 <button class="dot"></button>
                 <button class="dot"></button>
             </div>
+        </div>
+        <button class="btn btn-call-us" id="contact-button"></button>
+    </section>
+    <!-- ABOUT US -->
+    <section class="about-us">
+        <div class="title-container">
+            <h2>about us</h2>
+            <h4>who we are?</h4>
+        </div>
+        <nav class="about-us-info">
+            <div class="col-6 description">
+                <p>
+                    Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum
+                    ipsum. Nulla at facilisis est, vel condimentum igula. Mauris volutpar vitae risus sed pellen-
+                    tesque. Praesent fermentum neque ac tellus gravida, at varius sem accumsan. Nam porta
+                    erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermen-
+                    tum, orci leo facilisis purus. Nam porta erat id sapien consectetur. Fusce sed purus eros.
+                    Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus.
+                </p>
+                <button class="btn btn-main">learn more</button>
+            </div>
+            <div class="col-4 video">
+                <img src="./images/video.jpg" alt="">
+            </div>
+        </nav>
+    </section>
+<!-- SERVICES -->
+    <section class="services">
+        <div class="title-container">
+            <h2>services</h2>
+            <h4>services that we provide</h4>
+        </div>
+        <nav class="our-services" id="services-container">
+            <!-- js magic -->
+        </nav>
+    </section>
+    <section class="projects">
+        <div class="title-container">
+            <h2>our projects</h2>
+            <h4>what we create</h4>
+        </div>
+        <nav class="projects-navbar">
+            <ul class="nav-list projects-nav-list">
+                <li><a href="#">all</a></li>
+                <li><a href="#">photos</a></li>
+                <li><a href="#">branding</a></li>
+                <li><a href="#">adverts</a></li>
+                <li><a href="#">development</a></li>
+                <li><a href="#">misc</a></li>
+            </ul>
+        </nav>
+        <div class="photos-container">
+            <div class="col-3 photos-column">
+                <img src="./images/photos/1.jpg" alt="girl-listens-music">
+                <img src="./images/photos/2.jpg" alt="man-with-beard">
+                <img src="./images/photos/3.jpg" alt="girl-listens-music">
+            </div>
+            <div class="col-3 photos-column">
+                <img src="./images/photos/1a.jpg" alt="girl-in-glasses">
+                <img src="./images/photos/2a.jpg" alt="notebooks">
+                <img src="./images/photos/3a.jpg" alt="couple-in-glasses">
+            </div>
+            <div class="col-3 photos-column">
+                <img src="./images/photos/1b.jpg" alt="bottle">
+                <img src="./images/photos/2b.jpg" alt="camera">
+                <img src="./images/photos/3b.jpg" alt="letter">
+            </div>
+            <div class="col-3 photos-column">
+                <img src="./images/photos/1c.jpg" alt="bottle">
+                <img src="./images/photos/2c.jpg" alt="camera">
+                <img src="./images/photos/3c.jpg" alt="letter">
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn btn-main">more projects</button>
         </div>
     </section>
 
