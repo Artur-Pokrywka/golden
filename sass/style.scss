@@ -1,24 +1,11 @@
 @import "normalize";
 @import "variables"; 
+@import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
 
-@mixin font-source($font-family, $font-size, $color, $font-weight, $font-style) {
-    font-family: $font-family;
-    font-size: $font-size;
-    color: $color;
-    font-weight: $font-weight;
-    font-style: $font-style;
-}
-
-@mixin flexible($display, $align-items, $justify-content, $flex-direction) {
-    display: $display;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    flex-direction: $flex-direction;
-}
 
 // GENERAL
 .nav-list {
@@ -28,14 +15,22 @@
     margin: 0;
 }
 
-.dot { 
-    width: 15px;
-    height: 15px;
-    border: 2px solid $dirty-gold;
-    border-radius: 50%; 
-    margin: 0 2px;
-    background: transparent;
-}    
+.auxiliary-container {
+    @include flexible(flex, center, center, column);
+    .dot { 
+        width: 15px;
+        height: 15px;
+        border: 2px solid $dirty-gold;
+        border-radius: 50%; 
+        margin: 0 2px;
+        background: transparent;
+        outline: none;
+        cursor: pointer;
+        &:focus {
+            background-color: $dirty-gold;
+        }
+    }     
+}
 
 a {
     text-decoration: none;
@@ -83,6 +78,27 @@ h6 {
         @include font-source($main-font, 12px, $font-gray, 600, normal);
     }
 }
+
+.media-container {
+    @include flexible(flex, center, center, row);
+    margin: 30px 0; 
+    .media-item {
+        background-color: #bebebe; 
+        width: 25px;
+        height: 25px;
+        border-radius: 50%; 
+        margin: 0 3.5px;
+        &:hover {
+            background: $dirty-gold;
+        }
+        .fab,
+        .fas {
+            @include flexible(flex, center, center, row);
+            color: #fff;
+            padding: 5px;
+        }
+    }
+}
 // SECTION HEADER
 .header {
     .navbar,
@@ -128,10 +144,7 @@ h6 {
         }
         .pagination-container {
             position: absolute;
-            bottom: 20px;
-            .active {
-                background-color: $dirty-gold;
-            }  
+            bottom: 30px;
         }
     }
     .btn-call-us {
@@ -249,43 +262,19 @@ h6 {
             }
             .worker-caption {
                 @include font-source($main-font, 14px, #000, 400, normal);
-            }
-            .media-container {
-                @include flexible(flex, center, center, row);
-                margin: 30px 0; 
-                .media-item {
-                    background-color: #bebebe; 
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%; 
-                    margin: 0 3.5px;
-                    &:hover {
-                        background: $dirty-gold;
-                    }
-                    .fab,
-                    .fas {
-                        @include flexible(flex, center, center, row);
-                        color: #fff;
-                        padding: 5px;
-                    }
-                }
-            }
+            }   
         }
-    } 
-    .auxiliary-container {
-        @include flexible(flex, center, center, unset);
-        .pagination-container {
-            position: absolute;
-            bottom: 10px;
-            .active {
-                background-color: $dirty-gold;
-            }  
-        }
+    }     
+    .pagination-container {
+        position: absolute;
+        bottom: 10px;
     }
 }
 // HAPPY CLIENTS
 .happy-clients {
     background: $background-gray;
+    position: relative;
+    padding-bottom: 40px;
     .pr-head {
         @include flexible(flex, center, center, column);
         .worker-name {
@@ -302,14 +291,155 @@ h6 {
         .quotes {
             @include font-source($font-times, 18px, #7e7e7e, 600, normal); 
         }
-        .worker-caption {
+        .worker-description { 
             @include font-source($main-font, 14px, #7e7e7e, 300, normal);
             line-height: 25px;
-            margin-top: 0px;
+            text-align: center;
+        }
+    }
+    .pagination-container {
+        position: absolute;
+        bottom: 10px;
+    }
+}
+// SECTION BRANDS
+.brand-container {
+    img {
+        width: 100%;
+    }
+}
+// SECTION PRICE 
+.price {
+    background: $background-gray;
+    padding-bottom: 65px;
+    .prices-container {
+        @include flexible(flex, center, center, row);
+        .price-col {
+            @include flexible(flex, center, center, column);
+            background: #fff;
+            margin: 0 15px;
+            h2 {
+                @include font-source($main-font, 30px, #000, bold, normal);
+                line-height: 21px;
+                margin: 0;
+            } 
+            h3 {
+                @include font-source($main-font, 14px, #000, 400, normal);
+                line-height: 21px;
+                margin-top: 30px;
+            }
+            h6 {
+                @include font-source($main-font, 10px, $font-gray, 400, normal);
+                line-height: 21px;
+                margin: 5px;
+            }
+            .attribute-list {
+                @include font-source($main-font, 10px, #7e7e7e, 400, normal);
+                line-height: 13px;
+            }
+            .btn-choose {
+                width: 125px;
+                background: #373737;
+                margin-bottom: 35px;
+                &:focus {
+                    background: $dirty-gold;
+                }
+            }
         }
     }
 }
-
-
-
-
+// PREMIUM
+.premium {
+    .premium-container {
+        @include flexible(flex, center, center, row);
+        border-bottom: 2px #d8d8d8 solid;  
+        margin: 0 15%;
+    }
+    .premium-description {
+        .premium-list {
+            @include flexible(flex, center, flex-start, row);
+        }
+        h2 {
+            @include font-source($main-font, 20px, #000, 700, normal);
+            margin: 0 0 0 30px; 
+        }
+        p {
+            @include font-source($main-font, 12px, #707070, 400, normal);
+            line-height: 20px;
+            margin: 0 0 0 63px;
+        }
+        .second-paragraph {
+            margin-bottom: 35px;
+        } 
+        ul {
+            @include font-source($main-font, 14px, #707070, 300, normal);
+            padding-left: 0;
+            line-height: 25px;
+            margin: 10px 0 35px 63px;
+        }
+    }
+    .auxiliary-container {
+        margin: 40px 0;
+        .btn {
+            margin-top: 40px;
+        }
+    }
+}
+// SOME FACTS 
+.some-facts {
+    background: #000;
+    padding-bottom: 80px;
+    h2 {
+        color: #fff;
+    }
+    .facts-container {
+        @include flexible(flex, center, center, row);
+        margin: 0 10%;
+        .fact-column {
+            @include flexible(flex, center, center, column);
+            margin: 0 30px;
+            h2 {
+                @include font-source($main-font, 40px, $dirty-gold, 800, normal);
+                margin: 0;
+            }
+            hr {
+                color: #7e7e7e;
+                width: 15px;
+                margin: 0;
+            }
+            h3 {
+                @include font-source($main-font, 14px, #fff, 600, normal);
+                text-align: center;
+                margin-top: 5px;
+            }
+            .facts-caption {
+                @include font-source($main-font, 12px, #656565, 400, normal);
+                line-height: 15px;
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+// MEDIA
+.media {
+    @include flexible(flex, center, center, row);
+    .fab {
+        border-radius: 50%; 
+    } 
+    .fa-twitter {
+        background-color:  #00acee;
+    }
+    .fa-invision {
+        background-color:  #127cb4;
+    }
+    .fa-facebook-f {
+        background-color:  #336297;
+    }
+    .fa-google-plus {
+        background-color:  #e74237;
+    }
+    .fa-pinterest {
+        background-color:  #b71c29;
+    }
+}
