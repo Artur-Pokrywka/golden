@@ -8,6 +8,9 @@
 
 
 // GENERAL
+body {
+    box-sizing: border-box
+}
 .nav-list {
     list-style-type: none;
     text-transform: uppercase;
@@ -45,6 +48,9 @@ h6 {
     text-transform: uppercase;
 } 
 
+.btn-container {
+    @include flexible(flex, center, center, unset);
+}
 .btn {
     background: $dirty-gold;
     line-height: 18px;
@@ -92,7 +98,8 @@ h6 {
             background: $dirty-gold;
         }
         .fab,
-        .fas {
+        .fas,
+        .far {
             @include flexible(flex, center, center, row);
             color: #fff;
             padding: 5px;
@@ -234,9 +241,6 @@ h6 {
                 margin-bottom: 30px;
             }
         }
-    }
-    .btn-container {
-        @include flexible(flex, center, center, unset);
     }
 }
 // SECTION TEAM
@@ -424,13 +428,25 @@ h6 {
 // MEDIA
 .media {
     @include flexible(flex, center, center, row);
+    height: 75px;
+    .title-container {
+        @include flexible(flex, center, center, row);
+        margin-right: 55px;
+        .fas {
+            color: #b3b3b3; 
+            margin-right: 15px;
+        }
+    }
+    .media-item {
+        @include flexible(flex, center, end, row);
+        margin: 0 30px;
     .fab {
         border-radius: 50%; 
     } 
     .fa-twitter {
         background-color:  #00acee;
     }
-    .fa-invision {
+    .fa-linkedin-in {
         background-color:  #127cb4;
     }
     .fa-facebook-f {
@@ -439,7 +455,115 @@ h6 {
     .fa-google-plus {
         background-color:  #e74237;
     }
-    .fa-pinterest {
+    .fa-pinterest { 
         background-color:  #b71c29;
+    }
+    span {
+        @include font-source($main-font, 10px, #b3b3b3, bold, normal);
+        margin-left: 5px;
+    }
+    }
+
+}
+// CONTACT US 
+.contact {
+    background: $background-gray;
+    .contact-form {
+        @include flexible (flex, center, center, column);
+        margin: 0 25%;
+        .form-element {
+            @include font-source ($main-font, 14px, $font-gray, 400, normal);
+            background: $background-gray;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 3px solid $font-gray;
+            padding: 10px 0; 
+            width: 540px;
+            &:nth-child(2) {
+                margin-top: 45px;
+             }
+            &:nth-child(3) {
+               margin-top: 90px;
+            }
+        }
+        .form-short {
+            width: 255px;
+            display: inline;
+        }
+        .form-name {
+            margin-right: 30px;
+        }
+    }
+    .btn-container {
+        margin: 55px 0 75px 0;
+    }
+    .map-container {
+        position: relative;
+        img {
+            width: 100%;
+            // height: 400px;
+        }
+        .contact-information {
+            width: 540px;
+            background: #fff;
+            position: absolute;
+            top: 35px;
+            left: 250px;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            .media-item {
+                @include flexible(flex, center, end, row);
+                margin: 0 15px 15px 0;
+                span {
+                    white-space: nowrap;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+// FOOTER
+.footer {
+    @include flexible(flex, center, center, row);
+    background: #000;
+    padding-top: 30px;
+    .footer-column {
+        margin: 0 15px;
+    }
+    .footer-left-col {
+        .media-container {
+            justify-content: flex-start;
+            margin: 0;
+            .media-item {
+                background: #373737;
+            }    
+        }
+        p {
+            @include font-source($main-font, 14px, #fff, 400, normal);
+            text-transform: uppercase;
+            margin-top: 130px;
+        }   
+    }
+    .footer-mid-col {
+        @include font-source($main-font, 12px, #7e7e7e, 200, normal);
+        line-height: 21px;
+    } 
+    .footer-right-col {
+        @include flexible(flex, center, center, column);
+        background: #373737;
+        h4 {
+            @include font-source($main-font, 12px, $font-gray, 400, normal);
+            margin-top: 50px
+        }
+        hr {
+            width: 220px;
+            color: $font-gray;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        .btn {
+            margin-bottom: 45px;
+        }
     }
 }
