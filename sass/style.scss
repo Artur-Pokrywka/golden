@@ -11,6 +11,18 @@
 body {
     box-sizing: border-box
 }
+
+.flex-container {
+    @include flexible(flex, center, center, unset);
+}
+
+.flex-column-container {
+    @include flexible(flex, center, center, column);
+}
+.flex-row-container {
+    @include flexible(flex, center, center, row);
+}
+
 .nav-list {
     list-style-type: none;
     text-transform: uppercase;
@@ -114,7 +126,6 @@ h6 {
         height: 90px;
         .main-nav-list {
             @include font-source($main-font, 14px, #fff, bold, normal);
-            @include flexible(flex, center, center, unset);
             #logo {
                 height: 60px;
                 margin-right: 90px;
@@ -132,7 +143,6 @@ h6 {
         }
     }
     .hero {
-        @include flexible(flex, center, center, column);
         height: calc(100vh - 90px);
         background-image: url("../images/header-background.jpg");
         background-size: cover; 
@@ -190,7 +200,6 @@ h6 {
         color: #fff;
     }
     .our-services {
-        @include flexible(flex, center, center, row);
         padding-bottom: 75px; 
         .service {
             text-align: center;
@@ -208,7 +217,6 @@ h6 {
     background: $background-gray;
     padding-bottom: 55px;
     .projects-nav-list {
-        @include flexible(flex, center, center, unset);
         border: 1px solid #cfcfcf;
         border-radius: 40px; 
         height: 55px;
@@ -216,14 +224,12 @@ h6 {
         padding: 0;
         margin: 0 auto;
         li {
-            @include flexible(flex, center, center, unset);
             border-right: 1px solid #cfcfcf;
             padding: 0 40px;
             &:last-child {
                 border: none;
             }
             a {
-                @include flexible(flex, center, center, unset);
                 @include font-source($main-font, 14px, #000, 200, normal);
                 height: 51px;
                 &:hover {
@@ -233,13 +239,9 @@ h6 {
         } 
     }
     .photos-container {
-        @include flexible(flex, center, center, unset);
         margin: 40px 40px 0px 40px;
-        .photos-column {
-        @include flexible(flex, center, center, column);
-            img {
-                margin-bottom: 30px;
-            }
+        img {
+            margin-bottom: 30px;
         }
     }
 }
@@ -252,9 +254,7 @@ h6 {
         color: #fff;
     }
     .team-container {
-        @include flexible(flex, center, center, row);
         .team-member {
-            @include flexible(flex, center, center, column);
             background: #fff;
             margin: 0 15px;
             img {
@@ -280,7 +280,6 @@ h6 {
     position: relative;
     padding-bottom: 40px;
     .pr-head {
-        @include flexible(flex, center, center, column);
         .worker-name {
             @include font-source($main-font, 24px, #000, bold, normal);
             line-height: 18px;
@@ -317,9 +316,7 @@ h6 {
     background: $background-gray;
     padding-bottom: 65px;
     .prices-container {
-        @include flexible(flex, center, center, row);
         .price-col {
-            @include flexible(flex, center, center, column);
             background: #fff;
             margin: 0 15px;
             h2 {
@@ -337,14 +334,14 @@ h6 {
                 line-height: 21px;
                 margin: 5px;
             }
-            .attribute-list {
-                @include font-source($main-font, 10px, #7e7e7e, 400, normal);
+            .single-info {
+                @include font-source($main-font, 10px, #7e7e7e, 600, normal);
                 line-height: 13px;
             }
             .btn-choose {
                 width: 125px;
                 background: #373737;
-                margin-bottom: 35px;
+                margin: 30px 0;
                 &:focus {
                     background: $dirty-gold;
                 }
@@ -354,8 +351,8 @@ h6 {
 }
 // PREMIUM
 .premium {
+    padding-bottom: 40px;
     .premium-container {
-        @include flexible(flex, center, center, row);
         border-bottom: 2px #d8d8d8 solid;  
         margin: 0 15%;
     }
@@ -383,7 +380,7 @@ h6 {
         }
     }
     .auxiliary-container {
-        margin: 40px 0;
+        margin-top: 40px;
         .btn {
             margin-top: 40px;
         }
@@ -397,10 +394,8 @@ h6 {
         color: #fff;
     }
     .facts-container {
-        @include flexible(flex, center, center, row);
         margin: 0 10%;
         .fact-column {
-            @include flexible(flex, center, center, column);
             margin: 0 30px;
             h2 {
                 @include font-source($main-font, 40px, $dirty-gold, 800, normal);
@@ -479,6 +474,7 @@ h6 {
             border-bottom: 3px solid $font-gray;
             padding: 10px 0; 
             width: 540px;
+            outline: none;
             &:nth-child(2) {
                 margin-top: 45px;
              }

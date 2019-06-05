@@ -393,6 +393,27 @@ body {
   box-sizing: border-box;
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: unset;
+}
+
+.flex-column-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .nav-list {
   list-style-type: none;
   text-transform: uppercase;
@@ -536,10 +557,6 @@ h6 {
   color: #fff;
   font-weight: bold;
   font-style: normal;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: unset;
 }
 
 .header .navbar .main-nav-list #logo,
@@ -569,10 +586,6 @@ h6 {
 }
 
 .header .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   height: calc(100vh - 90px);
   background-image: url("../images/header-background.jpg");
   background-size: cover;
@@ -651,10 +664,6 @@ h6 {
 }
 
 .services .our-services {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   padding-bottom: 75px;
 }
 
@@ -684,10 +693,6 @@ h6 {
 }
 
 .projects .projects-nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: unset;
   border: 1px solid #cfcfcf;
   border-radius: 40px;
   height: 55px;
@@ -697,10 +702,6 @@ h6 {
 }
 
 .projects .projects-nav-list li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: unset;
   border-right: 1px solid #cfcfcf;
   padding: 0 40px;
 }
@@ -710,10 +711,6 @@ h6 {
 }
 
 .projects .projects-nav-list li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: unset;
   font-family: "Montserrat";
   font-size: 14px;
   color: #000;
@@ -727,21 +724,10 @@ h6 {
 }
 
 .projects .photos-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: unset;
   margin: 40px 40px 0px 40px;
 }
 
-.projects .photos-container .photos-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.projects .photos-container .photos-column img {
+.projects .photos-container img {
   margin-bottom: 30px;
 }
 
@@ -755,18 +741,7 @@ h6 {
   color: #fff;
 }
 
-.our-team .team-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
 .our-team .team-container .team-member {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background: #fff;
   margin: 0 15px;
 }
@@ -801,13 +776,6 @@ h6 {
   background: #f7f7f7;
   position: relative;
   padding-bottom: 40px;
-}
-
-.happy-clients .pr-head {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .happy-clients .pr-head .worker-name {
@@ -863,18 +831,7 @@ h6 {
   padding-bottom: 65px;
 }
 
-.price .prices-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
 .price .prices-container .price-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   background: #fff;
   margin: 0 15px;
 }
@@ -909,11 +866,11 @@ h6 {
   margin: 5px;
 }
 
-.price .prices-container .price-col .attribute-list {
+.price .prices-container .price-col .single-info {
   font-family: "Montserrat";
   font-size: 10px;
   color: #7e7e7e;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   line-height: 13px;
 }
@@ -921,18 +878,18 @@ h6 {
 .price .prices-container .price-col .btn-choose {
   width: 125px;
   background: #373737;
-  margin-bottom: 35px;
+  margin: 30px 0;
 }
 
 .price .prices-container .price-col .btn-choose:focus {
   background: #b88b58;
 }
 
+.premium {
+  padding-bottom: 40px;
+}
+
 .premium .premium-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   border-bottom: 2px #d8d8d8 solid;
   margin: 0 15%;
 }
@@ -979,7 +936,7 @@ h6 {
 }
 
 .premium .auxiliary-container {
-  margin: 40px 0;
+  margin-top: 40px;
 }
 
 .premium .auxiliary-container .btn {
@@ -996,18 +953,10 @@ h6 {
 }
 
 .some-facts .facts-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   margin: 0 10%;
 }
 
 .some-facts .facts-container .fact-column {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin: 0 30px;
 }
 
@@ -1133,6 +1082,7 @@ h6 {
   border-bottom: 3px solid #aeaeae;
   padding: 10px 0;
   width: 540px;
+  outline: none;
 }
 
 .contact .contact-form .form-element:nth-child(2) {
