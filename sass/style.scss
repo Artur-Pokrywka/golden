@@ -84,6 +84,12 @@ h6 {
     border-radius: 12px;
 }
 
+.btn-round {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .title-container {
     text-align: center;
     padding: 60px 0;
@@ -120,6 +126,7 @@ h6 {
 }
 // SECTION HEADER
 .header {
+    position: relative;
     .navbar,
     ul {
         background-color: #000;
@@ -165,9 +172,6 @@ h6 {
         }
     }
     .btn-call-us {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
         margin-top: -30px;
         margin-left: 90%; 
     }
@@ -248,8 +252,9 @@ h6 {
 // SECTION TEAM
 .our-team {
     background-image: url("../images/team-background.jpg"); 
+    background-size: cover; 
     position: relative;
-    padding-bottom: 80px; 
+    padding-bottom: 110px; 
     h2 {
         color: #fff;
     }
@@ -271,7 +276,7 @@ h6 {
     }     
     .pagination-container {
         position: absolute;
-        bottom: 10px;
+        bottom: 40px;
     }
 }
 // HAPPY CLIENTS
@@ -435,34 +440,35 @@ h6 {
     .media-item {
         @include flexible(flex, center, end, row);
         margin: 0 30px;
-    .fab {
-        border-radius: 50%; 
-    } 
-    .fa-twitter {
-        background-color:  #00acee;
-    }
-    .fa-linkedin-in {
-        background-color:  #127cb4;
-    }
-    .fa-facebook-f {
-        background-color:  #336297;
-    }
-    .fa-google-plus {
-        background-color:  #e74237;
-    }
-    .fa-pinterest { 
-        background-color:  #b71c29;
-    }
-    span {
-        @include font-source($main-font, 10px, #b3b3b3, bold, normal);
-        margin-left: 5px;
-    }
+        .fab {
+            border-radius: 50%; 
+        } 
+        .fa-twitter {
+            background-color:  #00acee;
+        }
+        .fa-linkedin-in {
+            background-color:  #127cb4;
+        }
+        .fa-facebook-f {
+            background-color:  #336297;
+        }
+        .fa-google-plus {
+            background-color:  #e74237;
+        }
+        .fa-pinterest { 
+            background-color:  #b71c29;
+        }
+        span {
+            @include font-source($main-font, 10px, #b3b3b3, bold, normal);
+            margin-left: 5px;
+        }
     }
 
 }
 // CONTACT US 
 .contact {
     background: $background-gray;
+    position: relative;
     .contact-form {
         @include flexible (flex, center, center, column);
         margin: 0 25%;
@@ -500,6 +506,7 @@ h6 {
             // height: 400px;
         }
         .contact-information {
+            padding:  55px 0 30px 30px;
             width: 540px;
             background: #fff;
             position: absolute;
@@ -512,11 +519,17 @@ h6 {
                 @include flexible(flex, center, end, row);
                 margin: 0 15px 15px 0;
                 span {
+                    @include font-source($main-font, 12px, #c3c3c3, 400, normal);
+                    line-height: 24px;
                     white-space: nowrap;
                     margin-left: 15px;
                 }
             }
         }
+    }
+    .btn-arrow {
+        left: 5%;
+        bottom: -25px;
     }
 }
 // FOOTER

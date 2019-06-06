@@ -9,30 +9,6 @@ function displayForm() {
 };
 
 // services
-const serviceDescriprion = 'Praesent metus urna, feugiat placerat elementum';
-const serviceList = [
-    {
-        imageSource: './images/services/quality.png',
-        name: "high quality design",
-        description: serviceDescriprion
-    },
-    {
-        imageSource: './images/services/design.png',
-        name: "modern design",
-        description: serviceDescriprion
-    },
-    {
-        imageSource: './images/services/updates.png',
-        name: "regular updates",
-        description: serviceDescriprion
-    },
-    {
-        imageSource: './images/services/support.png',
-        name: "fast and free support",
-        description: serviceDescriprion
-    },
-];
-
 function getTemplateForService(serviceList) {
     return `
             <img src=${serviceList.imageSource}>
@@ -52,31 +28,8 @@ function renderServices() {
     }
 }
 renderServices();
- 
-// price 
-const priceList = [
-    {
-        standard: 'Express',
-        price: '9.99',
-        time: 'month',
-    },
-    {
-        standard: 'Standard',
-        price: '14.99',
-        time: 'month',
-    },
-    {
-        standard: 'luxe',
-        price: '19.99',
-        time: 'month',
-    },
-    {
-        standard: 'premium',
-        price: '9.99',
-        time: 'month',
-    },
-];
 
+// price 
 function getTemplateForPrice(priceList) {
     return `
             <h3>${priceList.standard}</h3>
@@ -95,55 +48,30 @@ function renderPrices() {
         rowElement.classList.add('price-col', 'col-4','flex-column-container');
         rowElement.innerHTML = getTemplateForPrice(priceList[i]);
         pricesContainer.appendChild(rowElement);
+        const infoRow = rowElement.querySelector('.info-container');
+        renderInfo(infoRow, priceList[i].info);
+        pricesContainer.appendChild(infoRow);
     }
 }
 renderPrices();
 
-const infoArray = ['Tracking isues', 'Add bugs through email', 'Notifications', 'Time tracking', 'Custom views'];
+// infos
+const infoElements = ['Tracking isues', 'Add bugs through email', 'Notifications', 'Time tracking', 'Custom views'];
 
-function getTemplateForInfos(infoElement) {
-    return `${infoElement}`
+function getTemplateForInfos(infoElements) {
+    return `${infoElements}`
 }
 
-function renderInfos(infoElements) {
+function renderInfo(infoElements) {
     const infoContainer = document.querySelector('.info-container');
 
     infoElements.forEach(function(currentElement) {
-        const paragraph = document.createElement('p');
-        paragraph.classList.add('single-info');
-        paragraph.innerHTML = getTemplateForInfos(currentElement);
-        infoContainer.appendChild(paragraph);
+        infoContainer.innerHTML = getTemplateForInfos(currentElement);
     });
 
-}
-renderInfos(infoArray);
+};
 
 // some facts
-const factsDescription = 'Praesentmetus urna, feugiat a placerat elementum at leo';
-
-const factsList = [
-    {
-        number: '1000',
-        title: 'design projects released',
-        caption: factsDescription
-    },
-    {
-        number: '900',
-        title: 'photos',
-        caption: factsDescription
-    },
-    {
-        number: '500',
-        title: 'marketing ideas',
-        caption: factsDescription
-    },
-    {
-        number: '100',
-        title: 'exhibitions',
-        caption: factsDescription
-    },
-];
-
 function getTemplateForFacts(factsList) {
     return `
         <h2>${factsList.number}</h2>
@@ -163,7 +91,7 @@ function renderFacts() {
         factsContainer.appendChild(rowElement);
     }
 };
-renderFacts();
+renderFacts(factsList);
 
 
 // media items

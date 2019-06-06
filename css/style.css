@@ -490,6 +490,13 @@ h6 {
   border-radius: 12px;
 }
 
+.btn-round {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 .title-container {
   text-align: center;
   padding: 60px 0;
@@ -542,6 +549,10 @@ h6 {
   flex-direction: row;
   color: #fff;
   padding: 5px;
+}
+
+.header {
+  position: relative;
 }
 
 .header .navbar,
@@ -621,9 +632,6 @@ h6 {
 }
 
 .header .btn-call-us {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
   margin-top: -30px;
   margin-left: 90%;
 }
@@ -733,8 +741,9 @@ h6 {
 
 .our-team {
   background-image: url("../images/team-background.jpg");
+  background-size: cover;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 110px;
 }
 
 .our-team h2 {
@@ -769,7 +778,7 @@ h6 {
 
 .our-team .pagination-container {
   position: absolute;
-  bottom: 10px;
+  bottom: 40px;
 }
 
 .happy-clients {
@@ -1060,6 +1069,7 @@ h6 {
 
 .contact {
   background: #f7f7f7;
+  position: relative;
 }
 
 .contact .contact-form {
@@ -1115,6 +1125,7 @@ h6 {
 }
 
 .contact .map-container .contact-information {
+  padding: 55px 0 30px 30px;
   width: 540px;
   background: #fff;
   position: absolute;
@@ -1134,8 +1145,19 @@ h6 {
 }
 
 .contact .map-container .contact-information .media-item span {
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: #c3c3c3;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
   white-space: nowrap;
   margin-left: 15px;
+}
+
+.contact .btn-arrow {
+  left: 5%;
+  bottom: -25px;
 }
 
 .footer {
