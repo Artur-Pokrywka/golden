@@ -50,25 +50,27 @@ function renderPrices() {
         pricesContainer.appendChild(rowElement);
         const infoRow = rowElement.querySelector('.info-container');
         renderInfo(infoRow, priceList[i].info);
-        pricesContainer.appendChild(infoRow);
     }
 }
 renderPrices();
 
 // infos
+
 const infoElements = ['Tracking isues', 'Add bugs through email', 'Notifications', 'Time tracking', 'Custom views'];
 
 function getTemplateForInfos(infoElements) {
     return `${infoElements}`
 }
 
-function renderInfo(infoElements) {
-    const infoContainer = document.querySelector('.info-container');
+// const infoContainer = document.querySelector('.info-container');
 
+function renderInfo(infoContainer, infoElements) {
     infoElements.forEach(function(currentElement) {
-        infoContainer.innerHTML = getTemplateForInfos(currentElement);
+        const paragraph = document.createElement('p');
+        paragraph.classList.add('single-info');
+        paragraph.innerHTML = getTemplateForInfos(currentElement);
+        infoContainer.appendChild(paragraph);
     });
-
 };
 
 // some facts
@@ -96,22 +98,21 @@ renderFacts(factsList);
 
 // media items
 function getTemplateForIcon(iconClass) {
-    return `<a href="#"><i class="fab ${iconClass}"></i></a>`;
+    return `<a href="#"><i class=" ${iconClass}"></i></a>`;
 };
 
 function renderSocialIcons(iconClasses, containerId) {
     const socialIconContainer = document.getElementById(containerId);
-
     iconClasses.forEach(function(currentElement) {
         const div = document.createElement('div');
         div.classList.add('media-item');
         div.innerHTML = getTemplateForIcon(currentElement);
         socialIconContainer.appendChild(div);
     });
-
 }
-const fullIconsList = ['fa-twitter', 'fa-instagram', 'fa-linkedin-in', 'fa-facebook-f', 'fa-youtube', 'fa-google-plus', 'fa-ellipsis-h'];
-const shortIconsList = ['fa-twitter', 'fa-linkedin-in', 'fa-facebook-f', 'fa-google-plus', 'fa-pinterest'];
+
+const fullIconsList = ['fab fa-twitter', 'fab fa-instagram', 'fab fa-linkedin-in', 'fab fa-facebook-f', 'fab fa-youtube', 'fab fa-google-plus', 'fas fa-ellipsis-h'];
+const shortIconsList = ['fab fa-twitter', 'fab fa-linkedin-in', 'fab fa-facebook-f', 'fab fa-google-plus', 'fab fa-pinterest'];
 renderSocialIcons(fullIconsList, 'jane');
 renderSocialIcons(fullIconsList, 'mike');
 renderSocialIcons(fullIconsList, 'anna');

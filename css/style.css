@@ -467,6 +467,7 @@ h6 {
   background: #b88b58;
   line-height: 18px;
   text-transform: uppercase;
+  color: #fff;
   outline: none;
   border: none;
 }
@@ -555,14 +556,17 @@ h6 {
   position: relative;
 }
 
-.header .navbar,
-.header ul {
+.header .navbar {
   background-color: #000;
   height: 90px;
 }
 
-.header .navbar .main-nav-list,
-.header ul .main-nav-list {
+.header .navbar .logo {
+  height: 60px;
+  margin-right: 90px;
+}
+
+.header .navbar .main-nav-list {
   font-family: "Montserrat";
   font-size: 14px;
   color: #fff;
@@ -570,19 +574,11 @@ h6 {
   font-style: normal;
 }
 
-.header .navbar .main-nav-list #logo,
-.header ul .main-nav-list #logo {
-  height: 60px;
-  margin-right: 90px;
-}
-
-.header .navbar .main-nav-list li,
-.header ul .main-nav-list li {
+.header .navbar .main-nav-list li {
   margin: 0 8px;
 }
 
-.header .navbar .main-nav-list li a,
-.header ul .main-nav-list li a {
+.header .navbar .main-nav-list li a {
   font-family: "Montserrat";
   font-size: 14px;
   color: #fff;
@@ -591,8 +587,7 @@ h6 {
   padding: 32px 0;
 }
 
-.header .navbar .main-nav-list li a:hover,
-.header ul .main-nav-list li a:hover {
+.header .navbar .main-nav-list li a:hover {
   border-bottom: 4px solid #b88b58;
 }
 
@@ -827,8 +822,12 @@ h6 {
 }
 
 .happy-clients .pagination-container {
-  position: absolute;
   bottom: 10px;
+  margin-top: 30px;
+}
+
+.brand-container {
+  height: 95px;
 }
 
 .brand-container img {
@@ -1158,6 +1157,7 @@ h6 {
 .contact .btn-arrow {
   left: 5%;
   bottom: -25px;
+  color: #fff;
 }
 
 .footer {

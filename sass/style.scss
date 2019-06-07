@@ -67,6 +67,7 @@ h6 {
     background: $dirty-gold;
     line-height: 18px;
     text-transform: uppercase;
+    color: #fff;
     outline: none;
     border: none;
     &:hover {
@@ -127,16 +128,15 @@ h6 {
 // SECTION HEADER
 .header {
     position: relative;
-    .navbar,
-    ul {
+    .navbar {
         background-color: #000;
         height: 90px;
+        .logo {
+            height: 60px;
+            margin-right: 90px;
+        }
         .main-nav-list {
             @include font-source($main-font, 14px, #fff, bold, normal);
-            #logo {
-                height: 60px;
-                margin-right: 90px;
-            } 
             li {
                 margin: 0 8px;
                 a {
@@ -173,7 +173,7 @@ h6 {
     }
     .btn-call-us {
         margin-top: -30px;
-        margin-left: 90%; 
+        margin-left: 90%;
     }
 }
 
@@ -306,12 +306,13 @@ h6 {
         }
     }
     .pagination-container {
-        position: absolute;
         bottom: 10px;
+        margin-top: 30px;
     }
 }
 // SECTION BRANDS
 .brand-container {
+    height: 95px;
     img {
         width: 100%;
     }
@@ -530,6 +531,7 @@ h6 {
     .btn-arrow {
         left: 5%;
         bottom: -25px;
+        color: #fff;
     }
 }
 // FOOTER
