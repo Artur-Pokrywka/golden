@@ -55,14 +55,9 @@ function renderPrices() {
 renderPrices();
 
 // infos
-
-const infoElements = ['Tracking isues', 'Add bugs through email', 'Notifications', 'Time tracking', 'Custom views'];
-
 function getTemplateForInfos(infoElements) {
     return `${infoElements}`
 }
-
-// const infoContainer = document.querySelector('.info-container');
 
 function renderInfo(infoContainer, infoElements) {
     infoElements.forEach(function(currentElement) {
