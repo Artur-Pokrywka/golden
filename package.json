@@ -43,6 +43,7 @@
     "sanitycheck": "^2.0.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "chokidar": "^2.1.2",
     "postcss-cli-simple": "^3.0.0",
     "slug": "^1.0.0",
