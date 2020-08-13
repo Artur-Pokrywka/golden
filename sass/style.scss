@@ -1,26 +1,34 @@
 @import "normalize";
-@import "variables"; 
+@import "variables";
 @import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet');
-
-
 // GENERAL
 body {
     box-sizing: border-box
 }
 
 .flex-container {
-    @include flexible(flex, center, center, unset);
+    @include flexible(flex,
+    center,
+    center,
+    unset);
 }
 
 .flex-column-container {
-    @include flexible(flex, center, center, column);
+    @include flexible(flex,
+    center,
+    center,
+    column);
 }
+
 .flex-row-container {
-    @include flexible(flex, center, center, row);
+    @include flexible(flex,
+    center,
+    center,
+    row);
 }
 
 .nav-list {
@@ -31,12 +39,15 @@ body {
 }
 
 .auxiliary-container {
-    @include flexible(flex, center, center, column);
-    .dot { 
+    @include flexible(flex,
+    center,
+    center,
+    column);
+    .dot {
         width: 15px;
         height: 15px;
         border: 2px solid $dirty-gold;
-        border-radius: 50%; 
+        border-radius: 50%;
         margin: 0 2px;
         background: transparent;
         outline: none;
@@ -44,7 +55,7 @@ body {
         &:focus {
             background-color: $dirty-gold;
         }
-    }     
+    }
 }
 
 a {
@@ -58,11 +69,15 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-} 
+}
 
 .btn-container {
-    @include flexible(flex, center, center, unset);
+    @include flexible(flex,
+    center,
+    center,
+    unset);
 }
+
 .btn {
     background: $dirty-gold;
     line-height: 18px;
@@ -72,14 +87,18 @@ h6 {
     border: none;
     &:hover {
         cursor: pointer;
-    }  
+    }
     &:active {
-        background-color: #000;   
-    }  
+        background-color: #000;
+    }
 }
-    
+
 .btn-main {
-    @include font-source($main-font, 12px, #fff, bold, normal);
+    @include font-source($main-font,
+    12px,
+    #fff,
+    bold,
+    normal);
     width: 190px;
     height: 45px;
     border-radius: 12px;
@@ -91,27 +110,39 @@ h6 {
     height: 50px;
     border-radius: 50%;
 }
+
 .title-container {
     text-align: center;
     padding: 60px 0;
     h2 {
-        @include font-source($main-font, 25px, #000, 600, normal);
+        @include font-source($main-font,
+        25px,
+        #000,
+        600,
+        normal);
         line-height: 30px;
         margin: 0;
     }
     h4 {
-        @include font-source($main-font, 12px, $font-gray, 600, normal);
+        @include font-source($main-font,
+        12px,
+        $font-gray,
+        600,
+        normal);
     }
 }
 
 .media-container {
-    @include flexible(flex, center, center, row);
-    margin: 30px 0; 
+    @include flexible(flex,
+    center,
+    center,
+    row);
+    margin: 30px 0;
     .media-item {
-        background-color: #bebebe; 
+        background-color: #bebebe;
         width: 25px;
         height: 25px;
-        border-radius: 50%; 
+        border-radius: 50%;
         margin: 0 3.5px;
         &:hover {
             background: $dirty-gold;
@@ -119,12 +150,16 @@ h6 {
         .fab,
         .fas,
         .far {
-            @include flexible(flex, center, center, row);
+            @include flexible(flex,
+            center,
+            center,
+            row);
             color: #fff;
             padding: 5px;
         }
     }
 }
+
 // SECTION HEADER
 .header {
     position: relative;
@@ -136,34 +171,50 @@ h6 {
             margin-right: 90px;
         }
         .main-nav-list {
-            @include font-source($main-font, 14px, #fff, bold, normal);
+            @include font-source($main-font,
+            14px,
+            #fff,
+            bold,
+            normal);
             li {
                 margin: 0 8px;
                 a {
-                    @include font-source($main-font, 14px, #fff, bold, normal);
-                    padding: 32px 0; 
+                    @include font-source($main-font,
+                    14px,
+                    #fff,
+                    bold,
+                    normal);
+                    padding: 32px 0;
                     &:hover {
-                        border-bottom: 4px solid $dirty-gold; 
-                    }   
+                        border-bottom: 4px solid $dirty-gold;
+                    }
                 }
-            } 
+            }
         }
     }
     .hero {
         height: calc(100vh - 90px);
         background-image: url("../images/header-background.jpg");
-        background-size: cover; 
+        background-size: cover;
         text-align: center;
         h1 {
-            @include font-source($main-font, 72px, #fff, bold, normal);
+            @include font-source($main-font,
+            72px,
+            #fff,
+            bold,
+            normal);
             line-height: 69px;
             margin: 0;
             .communication {
                 color: $dirty-gold;
             }
-        } 
+        }
         h3 {
-            @include font-source($main-font, 24px, #fff, 600, normal);
+            @include font-source($main-font,
+            24px,
+            #fff,
+            600,
+            normal);
             line-height: 18px;
         }
         .pagination-container {
@@ -180,10 +231,17 @@ h6 {
 // SECTION ABUT US
 .about-us {
     background: $background-gray;
-    margin-top: -30px; 
-    .about-us-info{
-        @include font-source($main-font, 14px, #000, 200, normal);
-        @include flexible(flex, unset, center, unset);
+    margin-top: -30px;
+    .about-us-info {
+        @include font-source($main-font,
+        14px,
+        #000,
+        200,
+        normal);
+        @include flexible(flex,
+        unset,
+        center,
+        unset);
         padding-bottom: 90px;
         line-height: 25px;
         .description {
@@ -204,25 +262,34 @@ h6 {
         color: #fff;
     }
     .our-services {
-        padding-bottom: 75px; 
+        padding-bottom: 75px;
         .service {
             text-align: center;
             h3 {
-                @include font-source($main-font, 18px, #fff, 600, normal);
+                @include font-source($main-font,
+                18px,
+                #fff,
+                600,
+                normal);
             }
             p {
-                @include font-source($main-font, 12px, $description-gray, 400, normal);
+                @include font-source($main-font,
+                12px,
+                $description-gray,
+                400,
+                normal);
             }
         }
     }
 }
+
 // SECTION PROJECTS
 .projects {
     background: $background-gray;
     padding-bottom: 55px;
     .projects-nav-list {
         border: 1px solid #cfcfcf;
-        border-radius: 40px; 
+        border-radius: 40px;
         height: 55px;
         width: fit-content;
         padding: 0;
@@ -234,13 +301,17 @@ h6 {
                 border: none;
             }
             a {
-                @include font-source($main-font, 14px, #000, 200, normal);
+                @include font-source($main-font,
+                14px,
+                #000,
+                200,
+                normal);
                 height: 51px;
                 &:hover {
-                    border-bottom: 4px solid $dirty-gold; 
-                } 
+                    border-bottom: 4px solid $dirty-gold;
+                }
             }
-        } 
+        }
     }
     .photos-container {
         margin: 40px 40px 0px 40px;
@@ -249,12 +320,13 @@ h6 {
         }
     }
 }
+
 // SECTION TEAM
 .our-team {
-    background-image: url("../images/team-background.jpg"); 
-    background-size: cover; 
+    background-image: url("../images/team-background.jpg");
+    background-size: cover;
     position: relative;
-    padding-bottom: 110px; 
+    padding-bottom: 110px;
     h2 {
         color: #fff;
     }
@@ -266,19 +338,28 @@ h6 {
                 margin-top: 45px;
             }
             h5 {
-                @include font-source($main-font, 24px, #000, 500, normal);
+                @include font-source($main-font,
+                24px,
+                #000,
+                500,
+                normal);
                 margin-bottom: 0;
             }
             .worker-caption {
-                @include font-source($main-font, 14px, #000, 400, normal);
-            }   
+                @include font-source($main-font,
+                14px,
+                #000,
+                400,
+                normal);
+            }
         }
-    }     
+    }
     .pagination-container {
         position: absolute;
         bottom: 40px;
     }
 }
+
 // HAPPY CLIENTS
 .happy-clients {
     background: $background-gray;
@@ -286,21 +367,37 @@ h6 {
     padding-bottom: 40px;
     .pr-head {
         .worker-name {
-            @include font-source($main-font, 24px, #000, bold, normal);
+            @include font-source($main-font,
+            24px,
+            #000,
+            bold,
+            normal);
             line-height: 18px;
             text-transform: capitalize;
             margin-bottom: 0;
         }
         .worker-caption {
-            @include font-source($main-font, 18px, #000, 600, normal);
+            @include font-source($main-font,
+            18px,
+            #000,
+            600,
+            normal);
             line-height: 18px;
             margin-top: 0px;
         }
         .quotes {
-            @include font-source($font-times, 18px, #7e7e7e, 600, normal); 
+            @include font-source($font-times,
+            18px,
+            #7e7e7e,
+            600,
+            normal);
         }
-        .worker-description { 
-            @include font-source($main-font, 14px, #7e7e7e, 300, normal);
+        .worker-description {
+            @include font-source($main-font,
+            14px,
+            #7e7e7e,
+            300,
+            normal);
             line-height: 25px;
             text-align: center;
         }
@@ -310,6 +407,7 @@ h6 {
         margin-top: 30px;
     }
 }
+
 // SECTION BRANDS
 .brand-container {
     height: 95px;
@@ -317,6 +415,7 @@ h6 {
         width: 100%;
     }
 }
+
 // SECTION PRICE 
 .price {
     background: $background-gray;
@@ -326,22 +425,38 @@ h6 {
             background: #fff;
             margin: 0 15px;
             h2 {
-                @include font-source($main-font, 30px, #000, bold, normal);
+                @include font-source($main-font,
+                30px,
+                #000,
+                bold,
+                normal);
                 line-height: 21px;
                 margin: 0;
-            } 
+            }
             h3 {
-                @include font-source($main-font, 14px, #000, 400, normal);
+                @include font-source($main-font,
+                14px,
+                #000,
+                400,
+                normal);
                 line-height: 21px;
                 margin-top: 30px;
             }
             h6 {
-                @include font-source($main-font, 10px, $font-gray, 400, normal);
+                @include font-source($main-font,
+                10px,
+                $font-gray,
+                400,
+                normal);
                 line-height: 21px;
                 margin: 5px;
             }
             .single-info {
-                @include font-source($main-font, 10px, #7e7e7e, 600, normal);
+                @include font-source($main-font,
+                10px,
+                #7e7e7e,
+                600,
+                normal);
                 line-height: 13px;
             }
             .btn-choose {
@@ -355,31 +470,47 @@ h6 {
         }
     }
 }
+
 // PREMIUM
 .premium {
     padding-bottom: 40px;
     .premium-container {
-        border-bottom: 2px #d8d8d8 solid;  
+        border-bottom: 2px #d8d8d8 solid;
         margin: 0 15%;
     }
     .premium-description {
         .premium-list {
-            @include flexible(flex, center, flex-start, row);
+            @include flexible(flex,
+            center,
+            flex-start,
+            row);
         }
         h2 {
-            @include font-source($main-font, 20px, #000, 700, normal);
-            margin: 0 0 0 30px; 
+            @include font-source($main-font,
+            20px,
+            #000,
+            700,
+            normal);
+            margin: 0 0 0 30px;
         }
         p {
-            @include font-source($main-font, 12px, #707070, 400, normal);
+            @include font-source($main-font,
+            12px,
+            #707070,
+            400,
+            normal);
             line-height: 20px;
             margin: 0 0 0 63px;
         }
         .second-paragraph {
             margin-bottom: 35px;
-        } 
+        }
         ul {
-            @include font-source($main-font, 14px, #707070, 300, normal);
+            @include font-source($main-font,
+            14px,
+            #707070,
+            300,
+            normal);
             padding-left: 0;
             line-height: 25px;
             margin: 10px 0 35px 63px;
@@ -392,6 +523,7 @@ h6 {
         }
     }
 }
+
 // SOME FACTS 
 .some-facts {
     background: #000;
@@ -404,7 +536,11 @@ h6 {
         .fact-column {
             margin: 0 30px;
             h2 {
-                @include font-source($main-font, 40px, $dirty-gold, 800, normal);
+                @include font-source($main-font,
+                40px,
+                $dirty-gold,
+                800,
+                normal);
                 margin: 0;
             }
             hr {
@@ -413,12 +549,20 @@ h6 {
                 margin: 0;
             }
             h3 {
-                @include font-source($main-font, 14px, #fff, 600, normal);
+                @include font-source($main-font,
+                14px,
+                #fff,
+                600,
+                normal);
                 text-align: center;
                 margin-top: 5px;
             }
             .facts-caption {
-                @include font-source($main-font, 12px, #656565, 400, normal);
+                @include font-source($main-font,
+                12px,
+                #656565,
+                400,
+                normal);
                 line-height: 15px;
                 text-align: center;
                 margin-top: 15px;
@@ -426,67 +570,88 @@ h6 {
         }
     }
 }
+
 // MEDIA
 .media {
-    @include flexible(flex, center, center, row);
+    @include flexible(flex,
+    center,
+    center,
+    row);
     height: 75px;
     .title-container {
-        @include flexible(flex, center, center, row);
+        @include flexible(flex,
+        center,
+        center,
+        row);
         margin-right: 55px;
         .fas {
-            color: #b3b3b3; 
+            color: #b3b3b3;
             margin-right: 15px;
         }
     }
     .media-item {
-        @include flexible(flex, center, end, row);
+        @include flexible(flex,
+        center,
+        end,
+        row);
         margin: 0 30px;
         .fab {
-            border-radius: 50%; 
-        } 
+            border-radius: 50%;
+        }
         .fa-twitter {
-            background-color:  #00acee;
+            background-color: #00acee;
         }
         .fa-linkedin-in {
-            background-color:  #127cb4;
+            background-color: #127cb4;
         }
         .fa-facebook-f {
-            background-color:  #336297;
+            background-color: #336297;
         }
         .fa-google-plus {
-            background-color:  #e74237;
+            background-color: #e74237;
         }
-        .fa-pinterest { 
-            background-color:  #b71c29;
+        .fa-pinterest {
+            background-color: #b71c29;
         }
         span {
-            @include font-source($main-font, 10px, #b3b3b3, bold, normal);
+            @include font-source($main-font,
+            10px,
+            #b3b3b3,
+            bold,
+            normal);
             margin-left: 5px;
         }
     }
-
 }
+
 // CONTACT US 
 .contact {
     background: $background-gray;
     position: relative;
     .contact-form {
-        @include flexible (flex, center, center, column);
+        @include flexible (flex,
+        center,
+        center,
+        column);
         margin: 0 25%;
         .form-element {
-            @include font-source ($main-font, 14px, $font-gray, 400, normal);
+            @include font-source ($main-font,
+            14px,
+            $font-gray,
+            400,
+            normal);
             background: $background-gray;
             text-transform: uppercase;
             border: none;
             border-bottom: 3px solid $font-gray;
-            padding: 10px 0; 
+            padding: 10px 0;
             width: 540px;
             outline: none;
             &:nth-child(2) {
                 margin-top: 45px;
-             }
+            }
             &:nth-child(3) {
-               margin-top: 90px;
+                margin-top: 90px;
             }
         }
         .form-short {
@@ -507,7 +672,7 @@ h6 {
             // height: 400px;
         }
         .contact-information {
-            padding:  55px 0 30px 30px;
+            padding: 55px 0 30px 30px;
             width: 540px;
             background: #fff;
             position: absolute;
@@ -517,10 +682,17 @@ h6 {
             align-items: flex-start;
             margin: 0;
             .media-item {
-                @include flexible(flex, center, end, row);
+                @include flexible(flex,
+                center,
+                end,
+                row);
                 margin: 0 15px 15px 0;
                 span {
-                    @include font-source($main-font, 12px, #c3c3c3, 400, normal);
+                    @include font-source($main-font,
+                    12px,
+                    #c3c3c3,
+                    400,
+                    normal);
                     line-height: 24px;
                     white-space: nowrap;
                     margin-left: 15px;
@@ -534,9 +706,13 @@ h6 {
         color: #fff;
     }
 }
+
 // FOOTER
 .footer {
-    @include flexible(flex, center, center, row);
+    @include flexible(flex,
+    center,
+    center,
+    row);
     background: #000;
     padding-top: 30px;
     .footer-column {
@@ -548,23 +724,38 @@ h6 {
             margin: 0;
             .media-item {
                 background: #373737;
-            }    
+            }
         }
         p {
-            @include font-source($main-font, 14px, #fff, 400, normal);
+            @include font-source($main-font,
+            14px,
+            #fff,
+            400,
+            normal);
             text-transform: uppercase;
             margin-top: 130px;
-        }   
+        }
     }
     .footer-mid-col {
-        @include font-source($main-font, 12px, #7e7e7e, 200, normal);
+        @include font-source($main-font,
+        12px,
+        #7e7e7e,
+        200,
+        normal);
         line-height: 21px;
-    } 
+    }
     .footer-right-col {
-        @include flexible(flex, center, center, column);
+        @include flexible(flex,
+        center,
+        center,
+        column);
         background: #373737;
         h4 {
-            @include font-source($main-font, 12px, $font-gray, 400, normal);
+            @include font-source($main-font,
+            12px,
+            $font-gray,
+            400,
+            normal);
             margin-top: 50px
         }
         hr {
@@ -575,6 +766,500 @@ h6 {
         }
         .btn {
             margin-bottom: 45px;
+        }
+    }
+}
+
+@import "mixins";
+body {
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.btn {
+    @include font-source($main-font,
+    18px,
+    #fff,
+    bold,
+    normal);
+    background: $main-gold;
+    width: 240px;
+    height: 65px;
+    margin-bottom: 160px;
+    border-width: 0;
+    text-transform: uppercase;
+    border-radius: 2px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+h6 {
+    @include font-source($garamond-font,
+    18px,
+    $main-gray,
+    normal,
+    italic);
+    margin: 0;
+}
+
+// HERO SECTION
+.hero {
+    background-image: url("../images/background/background-head.jpg");
+    background-size: cover;
+    header {
+        @include flexible(flex,
+        baseline,
+        space-evenly,
+        unset);
+        .logo {
+            @include font-source($dancing-script,
+            26px,
+            $main-gold,
+            normal,
+            normal);
+        }
+        .navigation {
+            list-style-type: none;
+            display: flex;
+            li {
+                font-size: 14px;
+                margin: 50px 16px 205px 16px;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: $main-font;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .home {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        h1 {
+            @include font-source($main-font,
+            75px,
+            #fff,
+            bold,
+            normal);
+            margin-bottom: 60px;
+        }
+        h2 {
+            @include font-source($garamond-font,
+            40px,
+            #fff,
+            normal,
+            italic);
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// SECTION SERVICES
+.title-services {
+    @include flexible(flex,
+    center,
+    center,
+    column);
+    margin-top: 120px;
+    h2 {
+        @include section-title;
+    }
+}
+
+.services-holder {
+    display: flex;
+    margin: 120px 230px;
+    .service-element {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        margin: 20px 16px;
+        height: fit-content;
+        .icon-basket {
+            @include flexible(flex,
+            center,
+            center,
+            initial);
+            width: 60px;
+            height: 60px;
+            border: 3px solid $main-gold;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            .fa {
+                @include font-source("Font Awesome 5 Free",
+                18px,
+                $main-gold,
+                bold,
+                normal);
+                line-height: 75px;
+            }
+        }
+        h5 {
+            @include font-source($main-font,
+            18px,
+            #000,
+            bold,
+            normal);
+        }
+        p {
+            @include font-source($garamond-font,
+            15px,
+            $main-gray,
+            normal,
+            normal);
+            text-align: center;
+        }
+    }
+}
+
+// PORTFOLIO
+.portfolio {
+    display: block;
+    background: $background-gray;
+    height: fit-content;
+    .title-portfolio {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        padding-top: 120px;
+        h2 {
+            @include section-title;
+        }
+    }
+    .projects-holder {
+        margin: 80px 230px 120px 230px;
+        .row {
+            display: flex;
+            .project-example {
+                @include flexible(flex,
+                center,
+                center,
+                column);
+                background: #fff;
+                margin: 30px 16px;
+                img {
+                    margin-bottom: 30px;
+                }
+                h3 {
+                    @include font-source($main-font,
+                    18px,
+                    #000,
+                    bold,
+                    normal);
+                    margin: 0;
+                }
+                h5 {
+                    @include font-source($garamond-font,
+                    16px,
+                    $main-gray,
+                    normal,
+                    italic);
+                    margin: 0 0 30px 0;
+                }
+            }
+        }
+    }
+}
+
+//  ABOUT US
+.about-us {
+    .title-about {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        margin-top: 120px;
+        h2 {
+            @include section-title;
+        }
+    }
+    .about-holder {
+        .about-element {
+            @include flexible(flex,
+            center,
+            center,
+            row-reverse);
+            margin-top: 80px;
+            .img-basket {
+                position: absolute
+            }
+            .description {
+                h4 {
+                    @include font-source($main-font,
+                    18px,
+                    #000,
+                    bold,
+                    normal);
+                    margin: 0;
+                }
+                p {
+                    @include font-source($garamond-font,
+                    16px,
+                    $main-gray,
+                    normal,
+                    normal);
+                }
+            }
+            .description-left {
+                text-align: right;
+                margin-right: 500px;
+            }
+            .description-right {
+                text-align: left;
+                margin-left: 500px;
+            }
+        }
+        .last-element {
+            margin-bottom: 120px;
+        }
+    }
+}
+
+// AMAZING TEAM         
+.amazing-team {
+    background: $background-gray;
+    height: fit-content;
+    .title-team {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        padding-top: 120px;
+        h2 {
+            @include section-title;
+        }
+    }
+    .team-holder {
+        @include flexible(flex,
+        center,
+        center,
+        row);
+        .team-member {
+            @include flexible(flex,
+            center,
+            center,
+            column);
+            margin-top: 80px;
+            .member-photo {
+                background: #000;
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+            }
+            .member-caption {
+                h5 {
+                    @include font-source($main-font,
+                    16px,
+                    #000,
+                    bold,
+                    normal);
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+                p {
+                    @include font-source($times-font,
+                    16px,
+                    $main-gray,
+                    normal,
+                    normal);
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+            .member-media {
+                display: flex;
+                .media-circle {
+                    @include flexible(flex,
+                    center,
+                    center,
+                    initial);
+                    width: 30px;
+                    height: 30px;
+                    border: 3px solid;
+                    border-radius: 50%;
+                    margin: 20px 5px;
+                }
+                .facebook-circle {
+                    border-color: #3b5998;
+                    color: #3b5998;
+                }
+                .twitter-circle {
+                    border-color: #00aced;
+                    color: #00aced;
+                }
+                .pinterest-circle {
+                    border-color: #cb2028;
+                    color: #cb2028;
+                }
+                .google-circle {
+                    border-color: #d95232;
+                    color: #d95232;
+                }
+            }
+        }
+    }
+    .description {
+        p {
+            @include font-source($roboto-font,
+            16px,
+            $main-gray,
+            normal,
+            normal); // Czcionka nie działa! net::ERR_ABORTED 400
+            text-align: center;
+            margin-bottom: 120px;
+        }
+    }
+}
+
+//                                              CONTACT
+.logos {
+    @include flexible(flex,
+    center,
+    center,
+    row);
+    margin: 120px;
+}
+
+.contact {
+    background-image: url('../images/background/background-footer.jpg');
+    background-size: cover;
+    .contact-title {
+        @include flexible(flex,
+        center,
+        center,
+        column);
+        padding-top: 120px;
+        h2 {
+            @include section-title;
+            color: #fff;
+        }
+        h6 {
+            color: #777;
+        }
+    }
+    .contact-form {
+        @include flexible(flex,
+        center,
+        center,
+        row);
+        margin-top: 80px;
+        input,
+        textarea {
+            @include font-source($main-font,
+            14px,
+            #dfdfdf,
+            bold,
+            normal);
+            width: 440px;
+            height: 50px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            padding: 0 0 0 20px;
+            border-radius: 2px;
+            border-width: 0;
+        }
+        textarea {
+            height: 190px;
+            margin-left: 30px;
+            padding-top: 20px;
+        }
+    }
+    .btn-send-holder {
+        text-align: center;
+        .btn-send {
+            margin-bottom: 115px;
+        }
+    }
+}
+
+// FOOTER
+.footer {
+    @include flexible(flex,
+    center,
+    center,
+    row);
+    margin: 20px 0;
+    .copyright {
+        @include font-source($main-font,
+        14px,
+        #555,
+        normal,
+        normal);
+        margin-right: 550px;
+    }
+    .media-holder {
+        @include flexible(flex,
+        center,
+        center,
+        initial);
+        position: absolute;
+        .media {
+            @include flexible(flex,
+            center,
+            center,
+            initial);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            margin: 5px;
+        }
+        .media-twitter {
+            background-color: #00aced;
+        }
+        .media-facebook {
+            background-color: #3b5998;
+        }
+        .media-pinterest {
+            background-color: #cb2028;
+        }
+        .media-google {
+            background-color: #d95232;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-6 {
+        width: 50%
+    }
+    .services-holder {
+        display: block;
+    }
+    .amazing-team {
+        .team-holder {
+            display: block;
+        }
+    }
+    .portfolio {
+        .projects-holder {
+            .row {
+                display: block;
+                .project-example {
+                    margin: inherit;
+                }
+            }
+        }
+    }
+    .contact {
+        .contact-form {
+            display: block;
+            textarea {
+                margin-left: 0;
+            }
         }
     }
 }
