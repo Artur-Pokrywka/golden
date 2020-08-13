@@ -3,7 +3,6 @@
 const callUsButton = document.getElementById('contact-button');
 
 callUsButton.addEventListener('click', displayForm);
-// czy ten element to prompt czy modal??
 function displayForm() {
     const contactForm = prompt();
 };
